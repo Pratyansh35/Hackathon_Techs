@@ -5,7 +5,7 @@ import { useState } from "react";
 
 
 export default function Body() {
-  const [warningText, setWarningText] =useState("Hurry up!!! You are not in an safe zone you need to evacute quickli form the place");
+  const [warningText, setWarningText] =useState("Hurry up!!! You are not in an safe zone you need to evacute quickly form the place");
   const chagetext = () => {
     setWarningText("You are in a safe zone");
   }
