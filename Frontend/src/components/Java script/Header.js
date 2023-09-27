@@ -30,6 +30,9 @@ const Header = () => {
             <li>
               <Link to="/AgencyForm">Agency Form</Link>
             </li>  
+            <li>
+              <Link to="/AgentMap">Map</Link>
+            </li> 
           </ul>
         </nav>
       </header>
