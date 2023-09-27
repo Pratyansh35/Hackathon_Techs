@@ -7,7 +7,7 @@ export default function Video() {
   
     {
       
-      embedUrl: 'https://www.youtube.com/embed/https://www.youtube.com/watch?v=TkFz4sySV7M&list=RDTkFz4sySV7M&start_radio=1',
+      embedUrl: 'https://www.youtube.com/embed/im4DI6UNzIA?si=IDD3zdXv5XGOTo_e" title="YouTube video player',
       title: 'floods',
     },
     {
