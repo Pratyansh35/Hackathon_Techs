@@ -15,5 +15,4 @@ router.delete('/deleteReport/:id',async(req,res)=>{
     }
 })
 
-
 export {router as deleteReportRoute}
