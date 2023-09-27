@@ -10,7 +10,9 @@ export default function Body() {
     setWarningText("You are in a safe zone");
   }
   return (
+    <>
     <div className="body">
+    <div className="Imgback">
       <div className="card">
           <p className="card-text">
             {warningText}
@@ -31,5 +33,8 @@ export default function Body() {
         <Link to="/Video"> <button className="navButtons">Awareness Program</button></Link>
         <button className="navButtons">Donate Campaign</button></div>
     </div>
-  );
+    </div>
+
+    </>
+  )
 }
