@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import GoogleMapReact from "google-map-react";
 import axios from "axios"; 
 import "../css/Form.css";
-
+import {Link} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 export default function Form() {
+
+  const navigate=useNavigate();
   const [userLocation, setUserLocation] = useState({
     lat: 0,
     lng: 0,
@@ -15,7 +18,13 @@ export default function Form() {
     country: "",
   });
 
+  const [name,setName]=useState("");
+  const [phone,setPhone]=useState();
+  const [address,setAddress]=useState("");
+  const [disaster_type,setdistype]=useState("");
+
   useEffect(() => {
+    setdistype("select");
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
         setUserLocation({
@@ -62,6 +71,36 @@ export default function Form() {
     }
   };
 
+  // const validate=()=>{
+  //   if(name==="" || phone===NULL || address==="" || disaster_type==="select")
+  // }
+  const savedata=async()=>{
+    // alert("hell")
+        try {
+            const city="Jalandhar";
+            const state="Punjab";
+            await axios.post("http://localhost:4000/fileuserreport",{
+              name:name,
+              phone:phone,
+              address:address,
+              disaster_type:disaster_type,
+              lat:userLocation.lat,
+              lng:userLocation.lng,
+              city:city,
+              state:state
+            })
+            .then(res=>
+              {
+                alert(res.data.message)
+                navigate("/")
+            }
+            )
+          
+        } catch (error) {
+          console.error(error)
+        }  
+  }
+
   return (
     <div>
 
@@ -87,39 +126,45 @@ export default function Form() {
 
 
         <div className="location-info">
-        <form id="form">
-
-        <label for="fullName">Full Name:</label>
-        <input type="text" id="fullName" name="fullName" required></input>
-
-        <br></br>
-        
-        <label for="disasterType">Type of Disaster:</label>
-        <select id="disasterType" name="disasterType" required>
-            <option value="" disabled selected>Select a Disaster Type</option>
-            <option value="Earthquake">Earthquake</option>
-            <option value="Flood">Flood</option>
-            <option value="Wildfire">Wildfire</option>
-            <option value="Cyclone">Cyclone</option>
-            <option value="Landslides">Landslide</option>
-        </select>
-
-       <br></br>
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="1234567890"></input>
-       
-    
-          <h2>Location Information</h2>
-          <p>Latitude: {userLocation.lat}</p>
-          <p>Longitude: {userLocation.lng}</p>
-          <p>City:Phagwara</p>
-          <p>State:Punjab</p>
-          <p>Country:India</p>
-         <button type="submit">Submit</button>
-
-        </form>
-
+              <div>
+                <label>Name : </label>
+                <input type="text" required onChange={e=>setName(e.target.value)}/>
+              </div>
+              <div>
+                <label>Phone Number : </label>
+                <input type="Number" required onChange={e=>setPhone(e.target.value)}/>
+              </div>
+              <div>
+                <label>Address : </label>
+                <input type="text" required onChange={e=>setAddress(e.target.value)}/>
+              </div>
+              <div>
+                <label>Disaster Type : </label>
+                <select onChange={e=>setdistype(e.target.value)}>
+                  <option value="select">select</option>
+                  <option value="cyclone">Cyclone</option>
+                  <option value="EarthQuake">EarthQuake</option>
+                  <option value="Floods">Floods</option>
+                  <option value="WildFire">WildFire</option>
+                  <option value="LandSlides">LandSlides</option>
+                </select>
+              </div>
+              <div className="locinfo">
+                <label>Location Information : </label>
+                <label>{userLocation.lat} , {userLocation.lng}</label><br></br>
+                <label>City : Phagwara</label><br></br>
+                <label>State : Punjab</label>
+              </div>
+              {/* <Link to="/"><button onClick={savedata}>Submit</button></Link> */}
+              <button onClick={()=>{
+                (name==="" || phone==="" || address==="" || disaster_type==="select")?
+                alert("enter all fields"):
+                savedata()
+              }
+                }>Submit</button>
         </div>
+
+
       </div>
     </div>
   );
