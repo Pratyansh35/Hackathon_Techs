@@ -11,7 +11,7 @@ const Header = () => {
           <img
             src={logo}
             alt="Logo"
-            style={{ width: "150px", height: "auto" }}
+            style={{ width: "100px", height: "auto", marginLeft:"10px"}}
           />
          </div>
          <div className="heading3">

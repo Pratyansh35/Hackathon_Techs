@@ -9,7 +9,7 @@ export default function Body() {
 
 
   const chagetext = () => {
-    setWarningText("You are in a safe zone");
+    setWarningText("You are in a safe zone")
   }
   return (
 
@@ -45,3 +45,4 @@ export default function Body() {
 
   
 }
+
