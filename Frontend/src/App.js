@@ -3,6 +3,7 @@ import About from "./components/Java script/About";
 import Video from "./components/Java script/Video";
 import Form from "./components/Java script/Form";
 import Volunteer from "./components/Java script/Volunteer";
+import AgencyForm from "./components/Java script/AgencyDetaiRegistration";
 import {
   BrowserRouter as Router,
   Route,
@@ -25,6 +26,7 @@ function App() {
           <Route path="/Form" element={<Form />} />
           <Route path="/Volunteer" element={<Volunteer />} />
           <Route path="/Agency" element={<Agency />} />
+          <Route path="/AgencyForm" element={<AgencyForm/>}/>
         </Routes>
       </BrowserRouter>
     </div>

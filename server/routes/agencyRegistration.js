@@ -17,7 +17,9 @@ router.post('/addagency',async(req,res)=>{
     try {
         agency.save()
         .then(()=>{
-            res.json(agency)
+            res.json({
+                message:"data added successfully"
+            })
         })
     } catch (error) {
         console.error(error)

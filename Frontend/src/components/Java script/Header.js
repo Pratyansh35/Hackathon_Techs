@@ -27,7 +27,9 @@ const Header = () => {
             <li>
               <Link to="/Agency">For Agency</Link>
             </li>  
-
+            <li>
+              <Link to="/AgencyForm">Agency Form</Link>
+            </li>  
           </ul>
         </nav>
       </header>

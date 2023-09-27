@@ -1,0 +1,25 @@
+.spec-container{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.upcon{
+    display: flex;
+    gap: 7px;
+}
+
+.upcon select{
+    width: 200px;
+}
+
+.resource-container{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.resource-container button{
+    width: 150px;
+    height: 45px;
+}
