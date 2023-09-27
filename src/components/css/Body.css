@@ -1,0 +1,63 @@
+/* alert card */
+.card {
+  width: 90%; 
+  background-color: rgb(249, 98, 98);
+  border: 1px solid #da4e4e; 
+  border-radius: 10px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-left: 4%; 
+  margin-top: 3%;
+  padding: 10px;
+}
+
+.card-text {
+  font-size: 30px; 
+  font-family: 'Roboto', sans-serif;
+  color: #333; 
+  margin-bottom: 10px;}
+
+.card-btn {
+  background-color: white;
+  color:#da4e4e; 
+  border: none;
+  border-radius: 5px; 
+  padding: 10px 20px; 
+  font-size: 26px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 80%;
+  margin-top: -25%;
+  
+}
+
+.card-btn:hover {
+  background-color: #95e8ff;}
+
+
+
+
+/* 4 button container*/
+.container
+{
+  margin-top: 5%;
+  margin-left: 5%;
+}
+.navButtons{
+  width: 40%;
+  height: 100px;
+  border: none;
+  border-radius: 18px;
+  background-color: #574444; 
+  color: white;
+  font-size: 30px;
+  font-weight: 100;
+  margin-right: 25px;
+  margin-top: 45px;
+  margin-left: 45px;
+  box-shadow: 2px 2px 10px grey;
+}
+
+.navButtons:hover {
+  transform: scale(1.1);
+  transition: 0.75s;
+}
