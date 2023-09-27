@@ -5,6 +5,8 @@ import { disasterFileRoute } from './routes/disasterFileReport.js';
 import { getDisasterInfoROute } from './routes/getDisasterInfoRoute.js';
 import { deleteReportRoute } from './routes/deleteReport.js';
 import cors from 'cors'
+import { agencyRegistrationRoute } from './routes/agencyRegistration.js';
+import { getAgencyRoute } from './routes/getAgencyRoute.js';
 
 const app=express();
 app.use(cors())
@@ -15,7 +17,8 @@ mongoose.connect("mongodb+srv://aravind:aravind@hackathon.ihr2wuh.mongodb.net/Ha
 app.use('/',disasterFileRoute)
 app.use('/',getDisasterInfoROute)
 app.use('/',deleteReportRoute)
-
+app.use("/",agencyRegistrationRoute)
+app.use("/",getAgencyRoute);
 app.listen(4000,()=>{
     console.log("server is up")
 })
