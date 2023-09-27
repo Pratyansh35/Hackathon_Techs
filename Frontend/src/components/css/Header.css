@@ -13,6 +13,43 @@ header {
   justify-content: space-between;
 }
 
+.dropbtn {
+  margin-left:auto ;
+  margin-right: auto;
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-right: 50px;
+  margin-top: 20px;
+  float: right;
+  background-image: url('../../menu.png');
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  min-width: 160px;
+  z-index: 1;
+}
+.dropdown-content li {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  float: left;
+}
+
+
+
+
+.dropdown:hover .dropdown-content {display: block;}
+
+
 .logo{
   width: 10%;
   float: left;
@@ -25,6 +62,8 @@ header {
 .navbarr{
   width: 30%;
   float: right;
+  align-items: center;
+  align-content: center;
 }
 .logo img {
   width:50px; 
@@ -42,34 +81,33 @@ header {
   font-weight: bold;
 }
 
-nav ul {
+/* nav ul {
   list-style:none;
   margin: 21px;
   padding-right: 5px;
   display: flex;
-}
+} */
 
-nav li {
+/* nav li {
   margin-right: 20px;
-}
+} */
 .topDiv{
-  font-size: 40px;
+  font-size: 30px;
+  color: #fff;
 }
-nav a {
+/* nav a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
   font-size: 25px;
-}
+} */
 .topDiv:hover{
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  font-size: 25px;
+  color: #fff;
   transform: scale(1.1);
   transition: 0.25s;
   
 }
 
-nav a:hover {
+/* nav a:hover {
   text-decoration: none; 
-}
+} */
