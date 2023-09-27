@@ -126,13 +126,13 @@ export default function Form() {
 
 
         <div className="location-info">
-              <div>
+              <div className="Name">
                 <label>Name : </label>
                 <input type="text" required onChange={e=>setName(e.target.value)}/>
               </div>
               <div>
                 <label>Phone Number : </label>
-                <input type="Number" required onChange={e=>setPhone(e.target.value)}/>
+                <input type="tel" required onChange={e=>setPhone(e.target.value)}/>
               </div>
               <div>
                 <label>Address : </label>
@@ -149,7 +149,7 @@ export default function Form() {
                   <option value="LandSlides">LandSlides</option>
                 </select>
               </div>
-              <div className="locinfo">
+              <div className="location-info" id='location'>
                 <label>Location Information : </label>
                 <label>{userLocation.lat} , {userLocation.lng}</label><br></br>
                 <label>City : Phagwara</label><br></br>

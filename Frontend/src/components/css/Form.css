@@ -3,6 +3,7 @@
   align-items: flex-start;
   justify-content: space-between; 
   padding: 20px;
+
 }
 
 /* Style for the map container */
@@ -17,4 +18,18 @@
   padding: 20px;
   border: 1px solid #ccc;
   background-color: #f8f8f8;
+  margin-bottom: 31px;
+}
+button{
+  margin-top: 2%;
+  width: 25%;
+  height:30px;
+  border-radius: 5%;
+  background-color: #816f6f;
+  font-size: medium;
+  font-weight: 700;
+}
+label{
+  font-size: large;
+  font-weight: 600;
 }
