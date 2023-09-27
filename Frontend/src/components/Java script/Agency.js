@@ -19,13 +19,13 @@ export default function Agency() {
             
             <form action="action_page.php">
                 <div class="loginDiv" id='loginDiv'>
-                    falfaf
+                    
                 </div>
 
 
 
                 <div class="SignUpDiv" id='SignUpDiv'>
-                    <h1>Registration</h1>
+                    <h1 >Registration Form</h1>
                     <p>Please fill in this form to create an account.</p>
                     <hr/>
 
