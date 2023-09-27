@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function Body() {
   const [warningText, setWarningText] =useState("Hurry up!!! You are not in an safe zone you need to evacute quickly form the place");
   const chagetext = () => {
-    setWarningText("You are in a safe zone");
+    setWarningText("You are in a safe zone")
   }
   return (
     <>
@@ -18,9 +18,10 @@ export default function Body() {
           <button className="card-btn" onClick={chagetext}>Learn More</button>
       </div>
 
+      <div id="slideshow">
+      </div>
 
       <div className="container">
-        
         <Link to="/Form"> <button className="navButtons">Report Disaster</button></Link>
         <Link to="/Volunteer"><button className="navButtons">Volunteer</button></Link>
         <Link to="/Video"> <button className="navButtons">Video</button></Link>
@@ -29,3 +30,4 @@ export default function Body() {
     </>
   );
 }
+

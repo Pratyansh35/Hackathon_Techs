@@ -11,7 +11,7 @@ const Header = () => {
           <img
             src={logo}
             alt="Logo"
-            style={{ width: "150px", height: "auto" }}
+            style={{ width: "100px", height: "auto", marginLeft:"10px"}}
           />
           <span className="heading">Disaster Resistance</span>
         </div>
@@ -25,7 +25,7 @@ const Header = () => {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/Agency">For Agency</Link>
+              <Link to="/Agency">Agency</Link>
             </li>  
             <li>
               <Link to="/AgencyForm">Agency Form</Link>
