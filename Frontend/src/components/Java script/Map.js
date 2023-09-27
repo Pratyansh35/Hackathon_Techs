@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {GoogleMap,useLoadScript,MarkerF} from '@react-google-maps/api';
 import axios from 'axios'
-
+import '../css/agencymap.css'
 const AgencyMapComponent=()=>{
 
     const [agencydetails,setagentdetails]=useState([])
@@ -23,21 +23,49 @@ const AgencyMapComponent=()=>{
     if(loadError) return "Error";
     if(!isLoaded) return "Maps"
     return(
-        <div>
-            <GoogleMap
-            onLoad={onMapLoad}
-            mapContainerStyle={{width:"700px",height:"500px"}}
-            center={{lat:20.5937,lng:78.9629}}
-            zoom={4.2}>
+        <div className="agency-main">
+            <div className="left-part-agent">
+                <GoogleMap
+                onLoad={onMapLoad}
+                mapContainerStyle={{width:"1000px",height:"800px",margin:"20px"}}
+                center={{lat:20.5937,lng:78.9629}}
+                zoom={5.2}>
 
+                    {
+                        agencydetails.map(agency=>{
+                            return <MarkerF position={agency.location} onClick={()=>{
+                                alert("you clicked")
+                            }}/>
+                        })
+                    }
+                </GoogleMap>
+            </div>
+            <div className="right-part-agent">
                 {
                     agencydetails.map(agency=>{
-                        return <MarkerF position={agency.location} onClick={()=>{
-                            alert("you clicked")
-                        }}/>
+                        return <div className="agencycard">
+                            <label>Agency Name : {agency.agencyname}</label>
+                            <label>City : {agency.city}</label>
+                            <label>State : {agency.state}</label>
+                            <label>Address : {agency.address}</label>
+                            <label>Specialized : {
+                                agency.specializedarea.map(e=>{
+                                    return <label>{e}</label>
+                                })
+                                }</label>
+                            <label>Resources : {
+                                agency.resources.map(e=>{
+                                    return <div>
+                                        <label>Resource Type : {e.resourcetype}</label>
+                                        <label>Count : {e.count}</label>
+                                        <label>Man Power : {e.manpower}</label>
+                                    </div>
+                                })
+                            }</label>
+                            </div>
                     })
                 }
-            </GoogleMap>
+            </div>
         </div>
     )
 }

@@ -5,6 +5,7 @@ import Form from "./components/Java script/Form";
 import Volunteer from "./components/Java script/Volunteer";
 import AgencyForm from "./components/Java script/AgencyDetaiRegistration";
 import AgencyMapComponent from "./components/Java script/Map";
+import MapComponent from './components/Java script/MapComponent';
 import {
   BrowserRouter as Router,
   Route,
@@ -29,6 +30,7 @@ function App() {
           <Route path="/Agency" element={<Agency />} />
           <Route path="/AgencyForm" element={<AgencyForm/>}/>
           <Route path="/AgentMap" element={<AgencyMapComponent/>}/>
+          <Route path="/ReportMap" element={<MapComponent/>}/>
         </Routes>
       </BrowserRouter>
     </div>

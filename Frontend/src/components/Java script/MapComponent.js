@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import {GoogleMap,useLoadScript,MarkerF} from '@react-google-maps/api';
-import {loc} from "./locations/Locations.js";
-import blueloclogo from '../images/smallbluenavlogo.png'
+import {loc} from "./Locations.js";
+// import blueloclogo from '../images/smallbluenavlogo.png'
 import Details from "./Detail.js";
-import './Map.css'
+import '../css/Map.css'
 const MapComponent = ()=>{
     const [latitude,setLatitude]=useState();
     const [longitude,setLongitude]=useState();
@@ -282,9 +282,7 @@ const MapComponent = ()=>{
                         })
                         
                     }
-                    <MarkerF position={{lat:clat,lng:clong}} options={{
-                        icon:blueloclogo
-                    }}
+                    <MarkerF position={{lat:clat,lng:clong}} 
                     width="20px"
                     height="20px"/>
 
