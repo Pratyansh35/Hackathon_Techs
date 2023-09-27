@@ -114,6 +114,7 @@ export default function Form() {
           <p>Longitude: {userLocation.lng}</p>
           <p>City: {locationInfo.city}</p>
           <p>State:{locationInfo.sate}</p>
+          <p>Country:{locationInfo.country}</p>
         
          <button type="submit">Submit</button>
 
