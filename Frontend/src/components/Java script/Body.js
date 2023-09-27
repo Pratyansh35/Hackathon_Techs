@@ -23,9 +23,13 @@ export default function Body() {
         
         <Link to="/Form"> <button className="navButtons">Report Disaster</button></Link>
         <Link to="/Volunteer"><button className="navButtons">Volunteer</button></Link>
-        <Link to="/Video"> <button className="navButtons">Video</button></Link>
-        <button className="navButtons">Donate</button>
       </div>
+      <div className="containerAgency">
+      <Link to="/Agency"><button className="navAgency">Agency</button></Link>
+     </div> 
+     <div className="container">
+        <Link to="/Video"> <button className="navButtons">Awareness Program</button></Link>
+        <button className="navButtons">Donate Campaign</button></div>
     </>
   );
 }
