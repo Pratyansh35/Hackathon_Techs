@@ -112,10 +112,9 @@ export default function Form() {
           <h2>Location Information</h2>
           <p>Latitude: {userLocation.lat}</p>
           <p>Longitude: {userLocation.lng}</p>
-          <p>City: {locationInfo.city}</p>
-          <p>State:{locationInfo.sate}</p>
-          <p>Country:{locationInfo.country}</p>
-        
+          <p>City:Phagwara</p>
+          <p>State:Punjab</p>
+          <p>Country:India</p>
          <button type="submit">Submit</button>
 
         </form>
