@@ -24,7 +24,7 @@ export default function Body() {
       <div className="container">
         
         <Link to="/Form"> <button className="navButtons">Report Disaster</button></Link>
-        <button className="navButtons">Be Volunteer</button>
+        <Link to="/Volunteer"><button className="navButtons">Volunteer</button></Link>
         <Link to="/Video"> <button className="navButtons">Video</button></Link>
         <button className="navButtons">Donate</button>
       </div>
