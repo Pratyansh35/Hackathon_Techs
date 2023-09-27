@@ -15,7 +15,7 @@ const Header = () => {
           />
          </div>
         <div className="heading">
-          <span className="heading">Disaster Resistance</span>
+          <span className="heading">Disaster Rescue Wave</span>
         </div> 
         <nav class='navbarr'>
           <ul>

@@ -5,12 +5,12 @@ import { useState } from "react";
 
 
 export default function Body() {
-  const [warningText, setWarningText] =useState("Hurry up!!! You are not in an safe zone you need to evacute quickly form the place");
+  const [warningText, setWarningText] =useState("Hurry up!!! You are not in a safe zone you, need to evacute quickly form the place");
   const chagetext = () => {
     setWarningText("You are in a safe zone");
   }
   return (
-    <>
+    <div className="body">
       <div className="card">
           <p className="card-text">
             {warningText}
@@ -30,6 +30,6 @@ export default function Body() {
      <div className="container">
         <Link to="/Video"> <button className="navButtons">Awareness Program</button></Link>
         <button className="navButtons">Donate Campaign</button></div>
-    </>
+    </div>
   );
 }

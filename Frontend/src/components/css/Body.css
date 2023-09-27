@@ -90,3 +90,6 @@
   transform: scale(1.1);
   transition: 0.75s;
 }
+body{
+  background-image: url(../images/background1.jpg);
+}
