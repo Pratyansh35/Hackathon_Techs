@@ -1,21 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "../css/Agency.css"
 
-var sg = document.getElementById("SignUpDiv");
-var lg = document.getElementById("loginDiv");
+
 export default function Agency() {
-    function signUp() {
-        sg.style.visibility = "visible";
-        lg.style.visibility = "hidden";
+    const [rvis,setrvis]=useState("");
+    const [rpos,setrpos]=useState("");
+    const [lvis,setlvis]=useState("");
+    const [lpos,setlpos]=useState("");
+    useEffect(()=>{
+        setlvis("hidden");
+        setlpos("absolute");
+        setrvis("visible");
+        setrpos("relative");
+    },[])
+    const changetol=()=>{
+        setlvis("visible");
+        setlpos("relative");
+        setrvis("hidden");
+        setrpos("absolute");
     }
-    function loginpg() {
-        sg.style.visibility = "hidden";
-        lg.style.visibility = "visible";
+    const changtor=()=>{
+        setlvis("hidden");
+        setlpos("absolute");
+        setrvis("visible");
+        setrpos("relative");
     }
     return (
         <div>
-            <form action="action_page.php" >
-            <div class="loginDiv" id='loginDiv' style={{visibility:"hidden"}}>
+            <form >
+            <div class="loginDiv" id='loginDiv' style={{visibility:lvis,position:lpos}}>
                 <h1>Registration</h1>
 
                     <p>Please fill in this form to create an account.</p>
@@ -28,7 +41,7 @@ export default function Agency() {
 
                     <div class="clearfix">
                     <p>By creating an account you agree to our <a href="#" style={{ color: "dodgerblue" }}>Terms & Privacy</a>.</p>
-                    <p style={{float:"right"}}>Haven't Registered yet? <a onClick={signUp} style={{ color: "dodgerblue" }}>SignUp</a>.</p>
+                    <p style={{float:"right"}} onClick={changtor}>Haven't Registered yet? <a style={{ color: "dodgerblue" }}>SignUp</a>.</p>
                     </div>
                     <div class="clearfix">
                         <button id="cancelbtn" type="button" class="cancelbtn">Cancel</button>
@@ -38,7 +51,7 @@ export default function Agency() {
                 </div>
           
             
-                <div class="SignUpDiv"  id='SignUpDiv' style={{visibility:"visible"}}>
+                <div class="SignUpDiv"  id='SignUpDiv' style={{visibility:rvis,position:rpos}}>
                     <h1>Registration</h1>
                     <p>Please fill in this form to create an account.</p>
                     <hr/>
@@ -57,7 +70,7 @@ export default function Agency() {
                     </label>
                     <div class="clearfix">
                     <p>By creating an account you agree to our <a href="#" style={{ color: "dodgerblue" }}>Terms & Privacy</a>.</p>
-                    <p style={{float:"right"}}>Already Registered <a onClick={loginpg} style={{ color: "dodgerblue" }}>Login</a>.</p>
+                    <p style={{float:"right"}} onClick={changetol}>Already Registered <a style={{ color: "dodgerblue"}}>Login</a>.</p>
                     </div>
                     <div class="clearfix">
                         <button id="cancelbtn" type="button" class="cancelbtn">Cancel</button>
