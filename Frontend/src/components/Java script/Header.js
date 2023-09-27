@@ -14,9 +14,14 @@ const Header = () => {
             style={{ width: "150px", height: "auto" }}
           />
          </div>
+         <div className="heading3">
+         <div className="heading2">
+          <h2>MINISTRY OF HOME AFFAIRS</h2>
+          </div>
         <div className="heading">
-          <span className="heading">Disaster Resistance</span>
+          <span className="heading">Disaster Rescue Wave</span>
         </div> 
+        </div>
         <nav class='navbarr'>
           <ul>
             <li>

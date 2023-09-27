@@ -26,7 +26,7 @@ const AgencyMapComponent=()=>{
         <div>
             <GoogleMap
             onLoad={onMapLoad}
-            mapContainerStyle={{width:"700px",height:"500px"}}
+            mapContainerStyle={{width:"700px",height:"500px",margin:"20px"}}
             center={{lat:20.5937,lng:78.9629}}
             zoom={4.2}>
 
