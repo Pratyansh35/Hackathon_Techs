@@ -29,9 +29,9 @@ export default function Agency() {
         <div>
             <form >
             <div class="loginDiv" id='loginDiv' style={{visibility:lvis,position:lpos}}>
-                <h1>Registration</h1>
+                <h1>Login</h1>
 
-                    <p>Please fill in this form to create an account.</p>
+                    <p>Please fill in this form to Login</p>
                     <hr/>
                     <label for="email"><b>Email</b></label>
                     <input type="text" placeholder="Enter Email" name="email" required/>
@@ -40,7 +40,7 @@ export default function Agency() {
                     <input type="password" placeholder="Enter Password" name="psw" required/>
 
                     <div class="clearfix">
-                    <p>By creating an account you agree to our <a href="#" style={{ color: "dodgerblue" }}>Terms & Privacy</a>.</p>
+                    <p>By Logging an account you agree to our <a href="#" style={{ color: "dodgerblue" }}>Terms & Privacy</a>.</p>
                     <p style={{float:"right"}} onClick={changtor}>Haven't Registered yet? <a style={{ color: "dodgerblue" }}>SignUp</a>.</p>
                     </div>
                     <div class="clearfix">

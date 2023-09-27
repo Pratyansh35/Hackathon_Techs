@@ -74,7 +74,7 @@ const AgencyForm=()=>{
     }
     return (
         <div>
-            
+            <form action="action_page.php" class='formag' >
                     <div>
                         <label>Agency Name : </label>
                         <input type="text" required onChange={e=>setagencyname(e.target.value)}/>
@@ -119,7 +119,7 @@ const AgencyForm=()=>{
                             <input type='text' placeholder='type' onChange={e=>setType(e.target.value)}/>
                             <input type='text' placeholder='count' onChange={e=>setCount(e.target.value)}/>
                             <input type='text' placeholder='manpower' onChange={e=>setMan(e.target.value)}/>
-                            <button onClick={addresource}>+</button>
+                            <button class='plusbtn' onClick={addresource}>+</button>
                         </div>
                         <div>
                             {
@@ -133,10 +133,10 @@ const AgencyForm=()=>{
                             }
                         </div>
                     </div>
-                    <div>
-                        <button onClick={savedata}>Submit</button>
+                    <div class='btndiv'>
+                        <button onClick={savedata} class='submitbtn'>Submit</button>
                     </div>
-            
+                </form>
         </div>
     )
 }
