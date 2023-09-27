@@ -1,9 +1,31 @@
 import React from 'react'
 import "../css/Volunteer.css";
+var v = document.getElementById("VolunteerReg");
+var i = document.getElementById("leftDiv");
+var r = document.getElementById("rightDiv");
 export default function Volunteer() {
+        function BecomeVol() {
+        i.style.border = "2px solid black";
+        r.style.border = "none";
+        v.style.visibility = "visible";
+    }
+    function regVol() {
+        r.style.border = "2px solid black";
+        i.style.border = "none";
+        v.style.visibility = "hidden";
+    }
     return (
-        <div>
-            <div class="TOpDiv">
+
+        <div class="reg_volunteer">
+        <div className='left_rightdiv'>
+            <div class="leftDiv" id='leftDiv' onClick={BecomeVol}>
+                <h5>Become Volunteer</h5>
+            </div>
+            <div class="rightDiv" id='rightDiv' onClick={regVol}>
+            <h5>Search Disasters</h5>
+            </div>
+            </div>
+            <div class="VolunteerReg" id='VolunteerReg' style={{visibility: "visible"}}>
                 <form action="action_page.php">
                     <div class="row">
                         <div class="col-25">
@@ -18,18 +40,18 @@ export default function Volunteer() {
                             <label for="lname">Last Name</label>
                         </div>
                         <div class="col-75">
-                        <input type="text" id="lName" name="lName" required></input>
+                            <input type="text" id="lName" name="lName" required></input>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-25">
-                            <label for="country">Country</label>
+                            <label for="country">State</label>
                         </div>
                         <div class="col-75">
                             <select id="country" name="country">
-                                <option value="australia">Australia</option>
-                                <option value="canada">Canada</option>
-                                <option value="usa">USA</option>
+                                <option value="australia">Uttar Pradesh</option>
+                                <option value="canada">Punjab</option>
+                                <option value="usa">Andrapradesh</option>
                             </select>
                         </div>
                     </div>
@@ -42,10 +64,10 @@ export default function Volunteer() {
                         </div>
                     </div>
                     <div class="row">
-                        <button type="submit" value="Submit"></button>
+                        <input type="submit" value="Submit"></input>
                     </div>
                 </form>
             </div>
-    </div>
-)
+        </div>
+    )
 }

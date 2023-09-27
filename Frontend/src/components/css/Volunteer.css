@@ -25,13 +25,47 @@ input[type=submit] {
 }
 
 /* Style the container */
-.TOpDiv {
+.reg_volunteer{
+  margin-top: 50px;
+  align-items: center;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
 }
 
+.left_rightdiv{
+  align-items: center;
+}
+
+.VolunteerReg {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  padding-top: 100px;
+}
+.leftDiv{
+  
+  text-align: center;
+  background-color: #04AA6D;
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 200px; 
+  height: 50px;
+  float:left;
+}
+.rightDiv{
+  margin-top: 20px;
+  text-align: center;
+  background-color: aqua;
+  width: 200px; 
+  border-radius: 5px;
+  height: 50px;
+  float: right;
+}
+
+
 /* Floating column for labels: 25% width */
+
 .col-25 {
   float: left;
   width: 25%;
