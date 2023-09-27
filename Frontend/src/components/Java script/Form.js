@@ -23,6 +23,8 @@ export default function Form() {
   const [address,setAddress]=useState("");
   const [disaster_type,setdistype]=useState("");
 
+
+
   useEffect(() => {
     setdistype("select");
     if ("geolocation" in navigator) {
@@ -46,7 +48,6 @@ export default function Form() {
       );
 
       console.log("Geocoding response:", response.data);
-
       const locationData = response.data.results[0];
       let city = "";
       let state = "";
