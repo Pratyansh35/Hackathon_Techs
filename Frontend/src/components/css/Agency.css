@@ -24,7 +24,6 @@ hr {
 .cancelbtn, .signupbtn {
   background-color: #04AA6D;
   color: white;
-  padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
@@ -50,7 +49,14 @@ hr {
 }
 
 /* Add padding to container elements */
-.SignUpDiv, loginDiv {
+.loginDiv{
+    visibility: hidden;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.SignUpDiv {
   margin-right: 10%;
   margin-left: 10%;
     margin-top: 100px;
