@@ -12,14 +12,33 @@ header {
   flex-direction: row;
 }
 
-.heading{
-  position: absolute;
-  margin-top: 23px;
-  font-size: 50px;
-  font-weight: bold;
-  margin-left: 460px;
+.logo{
+  width: 25%;
+  float: left;
+}
+.heading3{
+  width: 50%;
+  flex-direction: row;
+}
+.logo img {
+  width:50px; 
+  height: auto; 
+  margin-left: 40px;
 }
 
+.heading2{
+  font-size: 30px;
+  font-weight: bold;
+  
+}
+.heading{  
+  font-size: 25px;
+  font-weight: bold;
+}
+.navbarr{
+  width: 25%;
+  float: right;
+}
 nav ul {
   list-style:none;
   margin: 21px;

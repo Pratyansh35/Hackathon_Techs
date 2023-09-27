@@ -40,7 +40,7 @@ export default function Volunteer() {
                             <label for="fname">First Name</label>
                         </div>
                         <div class="col-75">
-                            <input type="text" id="fname" name="firstname" placeholder="Your name.."></input>
+                            <input type="text" id="fname" name="firstname" placeholder="Your First name.."></input>
                         </div>
                     </div>
                     <div class="row">
@@ -48,7 +48,7 @@ export default function Volunteer() {
                             <label for="lname">Last Name</label>
                         </div>
                         <div class="col-75">
-                            <input type="text" id="lName" name="lName" required></input>
+                            <input type="text" id="lName" name="lName" required placeholder="Your Last name.."></input>
                         </div>
                     </div>
                     <div class="row">

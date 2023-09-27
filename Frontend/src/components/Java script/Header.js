@@ -13,9 +13,16 @@ const Header = () => {
             alt="Logo"
             style={{ width: "100px", height: "auto", marginLeft:"10px"}}
           />
-          <span className="heading">Disaster Resistance</span>
+         </div>
+         <div className="heading3">
+         <div className="heading2">
+          <h2>MINISTRY OF HOME AFFAIRS</h2>
+          </div>
+        <div className="heading">
+          <span className="heading">Disaster Rescue Wave</span>
+        </div> 
         </div>
-        <nav>
+        <nav class='navbarr'>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -25,11 +32,11 @@ const Header = () => {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/Agency">Agency</Link>
-            </li>  
-            <li>
               <Link to="/AgencyForm">Agency Form</Link>
             </li>  
+            <li>
+              <Link to="/AgentMap">Map</Link>
+            </li> 
           </ul>
         </nav>
       </header>
