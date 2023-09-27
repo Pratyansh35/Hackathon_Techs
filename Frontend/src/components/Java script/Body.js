@@ -11,6 +11,7 @@ export default function Body() {
   }
   return (
     <>
+    <div className="Imgback">
       <div className="card">
           <p className="card-text">
             {warningText}
@@ -30,6 +31,7 @@ export default function Body() {
      <div className="container">
         <Link to="/Video"> <button className="navButtons">Awareness Program</button></Link>
         <button className="navButtons">Donate Campaign</button></div>
+    </div>
     </>
   );
 }

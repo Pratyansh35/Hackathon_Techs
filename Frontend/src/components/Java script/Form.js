@@ -129,15 +129,15 @@ export default function Form() {
         <div className="location-info">
               <div className="Name">
                 <label>Name : </label>
-                <input type="text" required onChange={e=>setName(e.target.value)}/>
+                <input type="text" required onChange={e=>setName(e.target.value)}placeholder="Your Name.."/>
               </div>
               <div>
                 <label>Phone Number : </label>
-                <input type="tel" required onChange={e=>setPhone(e.target.value)}/>
+                <input type="tel" required onChange={e=>setPhone(e.target.value)} placeholder="Phone no.."/>
               </div>
               <div>
                 <label>Address : </label>
-                <input type="text" required onChange={e=>setAddress(e.target.value)}/>
+                <input type="text" required onChange={e=>setAddress(e.target.value)}placeholder="Address.."/>
               </div>
               <div>
                 <label>Disaster Type : </label>
