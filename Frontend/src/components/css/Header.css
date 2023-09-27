@@ -1,13 +1,17 @@
 /* its header */
 header {
-  background-color: #574444; 
+  background-color: #cc5200; 
   color: #fff;
-  padding: 18px; 
+  padding: 20px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin:-10px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
 }
+
 
 .logo img {
   width:50px; 
@@ -16,9 +20,11 @@ header {
 }
 
 .heading{
+  position: absolute;
+  margin-top: 50px;
   font-size: 50px;
   font-weight: bold;
-  margin-left: 450px;
+  margin-left: 400px;
 }
 
 nav ul {

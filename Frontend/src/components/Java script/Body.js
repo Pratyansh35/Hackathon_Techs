@@ -12,12 +12,10 @@ export default function Body() {
   return (
     <>
       <div className="card">
-        <div className="card-body">
           <p className="card-text">
             {warningText}
           </p>
           <button className="card-btn" onClick={chagetext}>Learn More</button>
-        </div>
       </div>
 
 
