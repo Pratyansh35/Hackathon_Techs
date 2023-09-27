@@ -13,9 +13,11 @@ const Header = () => {
             alt="Logo"
             style={{ width: "150px", height: "auto" }}
           />
+         </div>
+        <div className="heading">
           <span className="heading">Disaster Resistance</span>
-        </div>
-        <nav>
+        </div> 
+        <nav class='navbarr'>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -24,9 +26,6 @@ const Header = () => {
             <li>
               <Link to="/about">About</Link>
             </li>
-            <li>
-              <Link to="/Agency">For Agency</Link>
-            </li>  
             <li>
               <Link to="/AgencyForm">Agency Form</Link>
             </li>  

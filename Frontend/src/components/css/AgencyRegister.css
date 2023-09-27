@@ -1,3 +1,39 @@
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  .plusbtn{
+    background-color: #bdc8c4;
+    color: rgb(254, 254, 254);
+    margin-right:5%;
+    float: none;
+    width: 150px;
+    height: 70px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+.submitbtn{
+    background-color: #04AA6D;
+    color: white;
+    margin-right:5%;
+    float: none;
+    width: 150px;
+    height: 70px;
+    border: none;
+    cursor: pointer;
+    
+}
+.btndiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
 .spec-container{
     display: flex;
     gap: 10px;
@@ -8,7 +44,10 @@
     display: flex;
     gap: 7px;
 }
-
+.formag{
+    margin: 10%;
+    margin-top: 10px;
+}
 .upcon select{
     width: 200px;
 }
@@ -16,6 +55,7 @@
 .resource-container{
     display: flex;
     gap: 10px;
+    width: 50%;;
     justify-content: center;
     align-items: center;
 }
