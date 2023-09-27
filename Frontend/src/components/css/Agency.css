@@ -50,7 +50,14 @@ hr {
 }
 
 /* Add padding to container elements */
-.SignUpDiv, loginDiv {
+.loginDiv{
+    visibility: hidden;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.SignUpDiv {
   margin-right: 10%;
   margin-left: 10%;
     margin-top: 100px;

@@ -1,30 +1,44 @@
-
 import React from 'react'
 import "../css/Agency.css"
 
 var sg = document.getElementById("SignUpDiv");
 var lg = document.getElementById("loginDiv");
 export default function Agency() {
-    // function signUp() {
-    //     sg.style.visibility = "visible";
-    //     lg.style.visibility = "hidden";
-    // }
-    
+    function signUp() {
+        sg.style.visibility = "visible";
+        lg.style.visibility = "hidden";
+    }
     function loginpg() {
         sg.style.visibility = "hidden";
         lg.style.visibility = "visible";
     }
     return (
         <div>
-            
-            <form action="action_page.php">
-                <div class="loginDiv" id='loginDiv'>
-                    falfaf
+            <form action="action_page.php" >
+            <div class="loginDiv" id='loginDiv' style={{visibility:"hidden"}}>
+                <h1>Registration</h1>
+
+                    <p>Please fill in this form to create an account.</p>
+                    <hr/>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required/>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required/>
+
+                    <div class="clearfix">
+                    <p>By creating an account you agree to our <a href="#" style={{ color: "dodgerblue" }}>Terms & Privacy</a>.</p>
+                    <p style={{float:"right"}}>Haven't Registered yet? <a onClick={signUp} style={{ color: "dodgerblue" }}>SignUp</a>.</p>
+                    </div>
+                    <div class="clearfix">
+                        <button id="cancelbtn" type="button" class="cancelbtn">Cancel</button>
+                        <button id="signUpbtn"type="submit" class="signupbtn">Log in</button>
+                    </div>
+                    
                 </div>
-
-
-
-                <div class="SignUpDiv" id='SignUpDiv'>
+          
+            
+                <div class="SignUpDiv"  id='SignUpDiv' style={{visibility:"visible"}}>
                     <h1>Registration</h1>
                     <p>Please fill in this form to create an account.</p>
                     <hr/>
