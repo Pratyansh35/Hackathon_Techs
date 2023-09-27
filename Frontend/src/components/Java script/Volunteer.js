@@ -6,11 +6,14 @@ export default function Volunteer() {
        const [oneposition,setOneposition]=useState("")
        const [secondposition,setSecondposition]=useState("")
        const [datavisibility,setDataVisibility]=useState("")
+       const [dataheight,setdataheight]=useState("")
        const [disasterData,setDisasterData]=useState([])
        useEffect(()=>{
         setVisibility("visible");
         setDataVisibility("hidden");
         setOneposition("relative");
+        setSecondposition("absolute");
+        setdataheight("0px");
         axios.get("http://localhost:4000/getreportdata")
         .then(res=>{
             setDisasterData(res.data)
@@ -23,12 +26,12 @@ export default function Volunteer() {
             {/* <div class="leftDiv" id='leftDiv'>
                 <h5>Become Volunteer</h5>
             </div> */}
-            <button class="leftDiv" id='leftDiv' onClick={()=>{setVisibility("visible");setDataVisibility("hidden");setOneposition("relative")}}>Volunteer Registration</button>
+            <button class="leftDiv" id='leftDiv' onClick={()=>{setVisibility("visible");setDataVisibility("hidden");setSecondposition("absolute");setOneposition("relative");setdataheight("0px");}}>Volunteer Registration</button>
 
             {/* <div >
             <h5>Search Disasters</h5>
             </div> */}
-            <button class="rightDiv" id='rightDiv' onClick={()=>{setVisibility("hidden");setDataVisibility("visible");setOneposition("absolute")}}>View Disasters</button>
+            <button class="rightDiv" id='rightDiv' onClick={()=>{setVisibility("hidden");setDataVisibility("visible");setSecondposition("relative");setOneposition("absolute");setdataheight("fit-content");}}>View Disasters</button>
             </div>
             <div class="VolunteerReg" id='VolunteerReg' style={{visibility:visibility}}>
                 <form style={{position:oneposition}}>
@@ -72,7 +75,7 @@ export default function Volunteer() {
                         <input type="submit" value="Submit"></input>
                     </div>
                 </form>
-                <div style={{visibility:datavisibility}}>
+                <div style={{visibility:datavisibility,position:secondposition,height:dataheight}}>
                     {
                         disasterData.map(e=>{
                             return <div className="detail-container">
