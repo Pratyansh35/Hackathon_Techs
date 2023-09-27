@@ -24,17 +24,17 @@ const Header = () => {
         </div>
         <nav class='navbarr'>
           <ul>
-            <li>
+            <li class="topDiv">
               <Link to="/">Home</Link>
             </li>
             
-            <li>
+            <li class="topDiv">
               <Link to="/about">About</Link>
             </li>
-            <li>
+            <li class="topDiv">
               <Link to="/AgencyForm">Agency Form</Link>
             </li>  
-            <li>
+            <li class="topDiv">
               <Link to="/AgentMap">Map</Link>
             </li> 
             <li>

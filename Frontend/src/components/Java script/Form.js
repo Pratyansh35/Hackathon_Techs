@@ -150,7 +150,7 @@ export default function Form() {
                   <option value="LandSlides">LandSlides</option>
                 </select>
               </div>
-              <div className="location-info" id='location'>
+              <div  id='location'>
                 <label>Location Information : </label>
                 <label>{userLocation.lat} , {userLocation.lng}</label><br></br>
                 <label>City : Phagwara</label><br></br>

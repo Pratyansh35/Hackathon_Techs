@@ -94,3 +94,8 @@
         width: 100vw;
     }
 }
+.mapDiv{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
