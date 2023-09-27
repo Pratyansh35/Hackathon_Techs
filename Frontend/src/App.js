@@ -2,6 +2,7 @@ import React from "react";
 import About from "./components/Java script/About";
 import Video from "./components/Java script/Video";
 import Form from "./components/Java script/Form";
+import Volunteer from "./components/Java script/Volunteer";
 import {
   BrowserRouter as Router,
   Route,
@@ -21,6 +22,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Video" element={<Video />} />
           <Route path="/Form" element={<Form />} />
+          <Route path="/Volunteer" element={<Volunteer />} />
         </Routes>
       </BrowserRouter>
     </div>
