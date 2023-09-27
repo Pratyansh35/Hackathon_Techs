@@ -112,8 +112,8 @@ export default function Form() {
             bootstrapURLKeys={{
               key: "AIzaSyAoBXELbu5nZJghKxa-eTgsur8XsgOaHCM",
             }}
-            center={userLocation}
-            zoom={17}
+            center={{lat:20.5937,lng:78.9629}}
+            zoom={5}
           >
             <Marker
               lat={userLocation.lat}
