@@ -23,7 +23,7 @@ export default function Body() {
 
       <div className="container">
         
-        <Link to="/Form"> <button className="navButtons">Form</button></Link>
+        <Link to="/Form"> <button className="navButtons">Report Disaster</button></Link>
         <button className="navButtons">Learn</button>
         <Link to="/Video"> <button className="navButtons">Video</button></Link>
         <button className="navButtons">Donate</button>
