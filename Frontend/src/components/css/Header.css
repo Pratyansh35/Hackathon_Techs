@@ -1,6 +1,6 @@
 /* its header */
 header {
-  background-color: #cc5200; 
+  background-image: linear-gradient(to right, #41559e , #cc5200);
   color: #fff;
   padding: 20px; 
   display: flex;
