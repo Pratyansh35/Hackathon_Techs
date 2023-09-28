@@ -44,6 +44,7 @@ const AgencyMapComponent=()=>{
                 </GoogleMap>
             </div>
             <div className="right-part-agent">
+                <h2>Registered Agencies </h2>
                 {
                     agencydetails.map(agency=>{
                         return <div className="agencycard">

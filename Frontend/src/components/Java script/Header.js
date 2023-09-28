@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../logo.png";
 import { Link } from "react-router-dom";
 import "../css/Header.css";
@@ -9,8 +9,10 @@ import browser from 'react-cookie'
 
 const Header = (props) => {
   const [cookies, setCookie,removeCookie] = useCookies(["user"]);
-
-
+  const [pos,setPos]=useState("");
+  useEffect(()=>{
+    setPos("absolute")
+  },[])
 
   return (
     <>
@@ -18,6 +20,7 @@ const Header = (props) => {
         <div className="logo">
           <img
             src={logo}
+
             alt="Logo"
             style={{ width: "100px", height: "auto", marginLeft:"10px"}}
           />
@@ -31,17 +34,23 @@ const Header = (props) => {
         </div> 
         </div>
         <CookiesProvider>
-         <div className="dropdown">
-          <div className="dropbtn"></div>
-        <nav>
-          <ul class='dropdown-content'>
-            <li>
+        <nav class='navbarr'>
+        <nav class='dropdown'>
+          
+          <div className="dropbtn">
+          </div>
+          <div className="dropdown-content" id="navItems">
+          <ul>
+            <li class="topDiv">
+            
               <Link to="/">Home</Link>
             </li>
-            <li>
+            
+            <li class="topDiv">
+            
               <Link to="/about">About</Link>
             </li>
-            <li className="AgencyLi">
+            <li>
               {
                 cookies.user?
                 <Link to="/AgencyForm">Agency Form</Link> : null
@@ -60,8 +69,16 @@ const Header = (props) => {
               cookies.user?
               <Link to="/ReportMap">Reported cases</Link> : null
               }
-              
-            </li> 
+              </li>
+            {/* <li class="topDiv">
+              <Link to="/AgencyForm">Agency Form</Link>
+            </li>   */}
+            {/* <li class="topDiv">
+              <Link to="/AgentMap">Map</Link>
+            </li>  */}
+            {/* <li class="topDiv">
+              <Link to="/ReportMap">Reported cases</Link>
+            </li>  */}
             <li>{
               !cookies.user?
                 <Link to="/Agency">Agency Login</Link>:null
@@ -78,8 +95,9 @@ const Header = (props) => {
               }
             </li>
           </ul>
+          </div>
         </nav>
-        </div> 
+        </nav>
         </CookiesProvider>
       </header>
     </>

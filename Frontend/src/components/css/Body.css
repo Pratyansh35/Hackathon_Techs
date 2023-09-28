@@ -42,7 +42,10 @@ marquee{
 }
 .Imgback{
   background-image: url("../../background1.jpg");
+  height: 680px;
   margin-top: 10px;
+  margin-left: -10px;
+  margin-right: -10px;
   padding:10px;
 }
 .card-btn:hover {
@@ -99,5 +102,5 @@ marquee{
   transition: 0.75s;
 }
 .body{
-  background-image: url(../background1.jpg);
+  height: 650px;
 }
