@@ -5,6 +5,8 @@ import {loc} from "./Locations.js";
 import Details from "./Detail.js";
 import '../css/Map.css'
 import Header from "./Header.js";
+import bluenav from '../bluenav.png';
+
 const MapComponent = ()=>{
     const [latitude,setLatitude]=useState();
     const [longitude,setLongitude]=useState();
@@ -287,7 +289,10 @@ const MapComponent = ()=>{
                     }
                     <MarkerF position={{lat:clat,lng:clong}} 
                     width="20px"
-                    height="20px"/>
+                    height="20px"
+                    options={{
+                        icon:bluenav
+                    }}/>
 
 
                 </GoogleMap>
