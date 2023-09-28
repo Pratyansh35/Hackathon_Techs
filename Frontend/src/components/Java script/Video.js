@@ -11,7 +11,7 @@ export default function Video() {
       title: 'Flooding and flood awareness',
     },
     {
-      title: 'earthquake',
+      title: 'How to protect yourself during an earthquake',
       embedUrl: 'https://www.youtube.com/embed/BLEPakj1YTY?si=J4Rt67rnRc4e2Pt_',
     },
     {
@@ -20,32 +20,32 @@ export default function Video() {
 
     },
     {
-      title: 'drought',
+      title: 'Severe drought safety tips..',
       embedUrl: 'https://www.youtube.com/embed/RrmWXfiM_b8?si=30THTqejfXWER-PG',
 
     },
     {
-      title: 'earthquake',
+      title: 'How to survive an earthquake',
       embedUrl: 'https://www.youtube.com/embed/r5EbbrVXoQw?si=SG51e54kZ9tVE3Pm',
 
     },
     {
-      title: 'Tsunami',
+      title: 'How to survive a Tsunami',
       embedUrl: 'https://www.youtube.com/embed/7EDflnGzjTY?si=OQcCqLiXS8DMcscQ',
 
     },
     {
-      title: 'drought',
+      title: 'Understanding drought',
       embedUrl: 'https://www.youtube.com/embed/oXG5SaZCVNU?si=DlzDQALrhSbbD9aM',
 
     },
     {
-      title: 'earthquake',
+      title: 'How does earthquake occur',
       embedUrl: 'https://www.youtube.com/embed/RqqqSnaTfQo?si=uvEei3ks1eg_EG8c',
 
     },
     {
-      title: 'tsunami',
+      title: 'Never Do Certain Things during tsunami',
       embedUrl: 'https://www.youtube.com/embed/fQAciMgl-kM?si=TaqOfvqBtooPwNio',
 
     },
@@ -60,12 +60,12 @@ export default function Video() {
       title: 'Flood safety measures',
     },
     {
-      title: 'earthquake',
+      title: 'Earthquake Prevention Measures',
       embedUrl: 'https://www.youtube.com/embed/BLEPakj1YTY?si=J4Rt67rnRc4e2Pt_',
     },
 
     {
-      title: 'tsunami',
+      title: '360° tsunami wave',
       embedUrl: 'https://www.youtube.com/embed/P1HX9Uh8OUg?si=1NerDz8WWi4q34Er',
 
     },
@@ -75,13 +75,13 @@ export default function Video() {
      
     },
     {
-      title: 'drought',
+      title: 'Drought prevention strategy',
       embedUrl: 'https://www.youtube.com/embed/5qMl5UDQkZc?si=bwnYRlbpMztd4kvc',
 
     },
    
     {
-      title: 'drought',
+      title: 'Drought: Be Prepared',
       embedUrl: 'https://www.youtube.com/embed/gmz8sFN2CeA?si=ZWJ73eV_7WUSRvSY',
     },
   ]);
