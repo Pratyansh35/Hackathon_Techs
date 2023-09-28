@@ -14,8 +14,6 @@
 }
 
 .location-info {
-  height: 590px;
-  width: 50%;
   flex: 1; 
   padding: 20px;
   border: 1px solid #ccc;
