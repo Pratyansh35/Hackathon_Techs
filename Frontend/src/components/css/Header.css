@@ -50,7 +50,7 @@ header {
 .dropdown:hover .dropdown-content {display: block;}
 
 
-.logo{
+.logo1{
   /* width: 25%; */
   float: left;
 }
@@ -58,8 +58,8 @@ header {
   width: 50%;
   flex-direction: block;
 }
-.logo img {
-  width:50px; 
+.logo1 img {
+  width:200px; 
   height: auto; 
   margin-left: 40px;
 }
