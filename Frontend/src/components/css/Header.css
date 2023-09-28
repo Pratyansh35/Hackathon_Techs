@@ -18,7 +18,7 @@ header {
 }
 .heading3{
   width: 50%;
-  flex-direction: row;
+  flex-direction: block;
 }
 .logo img {
   width:50px; 
@@ -56,6 +56,35 @@ nav a {
   font-weight: bold;
   font-size: 25px;
 }
+.dropbtn {
+  margin-left:auto ;
+  margin-right: auto;
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-right: 50px;
+  margin-top: 20px;
+  float: right;
+  background-image: url('../../menu.png');
+}
+.dropdown {
+  float: right;
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  
+  min-width: 160px;
+  z-index: 1;
+}
+.dropdown-content li {
+  /* padding: 12px 16px; */
+  text-decoration: none;
+  display:flex;
+  float: left;
+}
+.dropdown:hover .dropdown-content {display: flex;}
 
 
 nav a:hover {
