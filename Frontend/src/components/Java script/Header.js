@@ -31,16 +31,17 @@ const Header = (props) => {
         </div> 
         </div>
         <CookiesProvider>
-        <nav class='navbarr'>
-          <ul>
+         <div className="dropdown">
+          <div className="dropbtn"></div>
+        <nav>
+          <ul class='dropdown-content'>
             <li>
               <Link to="/">Home</Link>
             </li>
-            
             <li>
               <Link to="/about">About</Link>
             </li>
-            <li>
+            <li className="AgencyLi">
               {
                 cookies.user?
                 <Link to="/AgencyForm">Agency Form</Link> : null
@@ -78,6 +79,7 @@ const Header = (props) => {
             </li>
           </ul>
         </nav>
+        </div> 
         </CookiesProvider>
       </header>
     </>
