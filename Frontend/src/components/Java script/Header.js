@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../logo.png";
 import { Link } from "react-router-dom";
 import "../css/Header.css";
@@ -9,7 +9,10 @@ import browser from 'react-cookie'
 
 const Header = (props) => {
   const [cookies, setCookie,removeCookie] = useCookies(["user"]);
-
+  const [pos,setPos]=useState("");
+  useEffect(()=>{
+    setPos("absolute")
+  },[])
 
   return (
     <>
