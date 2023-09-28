@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../logo.png";
+import logo from "../../logo2.png";
 import { Link } from "react-router-dom";
 import "../css/Header.css";
 import { CookiesProvider, useCookies,Cookies} from "react-cookie";
@@ -20,15 +20,15 @@ const Header = (props) => {
             src={logo}
 
             alt="Logo"
-            style={{ width: "100px", height: "auto", marginLeft:"10px"}}
+            style={{ width: "200px", height: "auto", marginLeft:"10px"}}
           />
          </div>
          <div className="heading3">
          <div className="heading2">
-          <h2>MINISTRY OF HOME AFFAIRS</h2>
+          <h2>DISASTER RESCUE WAVE</h2>
           </div>
-        <div className="heading">
-          <span className="heading">Disaster Rescue Wave</span>
+        <div className="heading" >
+          <span className="heading">Ministry Of Home Affairs, Gov. Of India</span>
         </div> 
         </div>
         <CookiesProvider>

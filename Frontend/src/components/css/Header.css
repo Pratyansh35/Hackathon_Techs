@@ -1,6 +1,6 @@
 /* its header */
 header {
-  background-image: linear-gradient(to right, #41559e , #cc5200);
+  background-image: linear-gradient(to right, #efe4dd ,#696d7b );
   color: #fff;
   padding: 20px; 
   display: flex;
@@ -63,13 +63,15 @@ header {
   height: auto; 
   margin-left: 40px;
 }
-
 .heading2{
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
   
 }
 .heading{  
+  
   font-size: 25px;
   font-weight: bold;
 }
