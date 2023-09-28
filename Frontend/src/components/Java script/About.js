@@ -6,6 +6,7 @@ import Header from "./Header";
 import "../css/About.css";
 
 const About = () => {
+  
   const [slideIndex, setSlideIndex] = useState(1);
   useEffect(() => {
     showSlides(slideIndex);
@@ -50,21 +51,19 @@ const About = () => {
       <Header />
       <div className="slideshow-container">
         <div className="mySlides fade">
-          <div className="numbertext">1 / 3</div>
+         
           <img src={img1} style={{ width: "100%" }} />
-          <div className="text">Caption Text</div>
         </div>
 
         <div className="mySlides fade">
-          <div className="numbertext">2 / 3</div>
+          
           <img src={img2} style={{ width: "100%" }} />
-          <div className="text">Caption Two</div>
+          
         </div>
 
         <div className="mySlides fade">
-          <div className="numbertext">3 / 3</div>
           <img src={img3} style={{ width: "100%" }} />
-          <div className="text">Caption Three</div>
+          
         </div>
 
         <a className="prev" onClick={() => plusSlides(-1)}>
@@ -81,6 +80,22 @@ const About = () => {
         <span className="dot" onClick={() => currentSlide(2)}></span>
         <span className="dot" onClick={() => currentSlide(3)}></span>
       </div>
+      {/* <footer id="footer1" class="footer1">
+        <p>Github<br/>
+            
+                <img src="images/github.gif"/>
+            </a>
+        </p>
+        <p>Instagram<br/>
+                <img src="images/instagram.gif"/>
+            
+        </p>
+        <p>LinkedIn<br/>
+            
+                <img src="images/linkedin.gif"/>
+            
+        </p>
+    </footer> */}
     </>
   );
 };

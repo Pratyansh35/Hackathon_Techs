@@ -40,8 +40,8 @@ marquee{
   margin-right:5px;
   margin-top:5px ;
 }
-.Imgback{
-  background-image: url("../../background1.jpg");
+#Imgback{
+  background-image: url("../../background3.jpg");
   height: 680px;
   margin-top: 10px;
   margin-left: -10px;
@@ -83,7 +83,6 @@ marquee{
   height: 100px;
   border: none;
   border-radius: 18px;
-  background-image: linear-gradient(to  #efe4dd ,#696d7b ); 
   color: rgb(0, 0, 0);
   font-size: 30px;
   font-weight: 100;

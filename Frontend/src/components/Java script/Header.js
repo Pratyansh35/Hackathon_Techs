@@ -84,8 +84,8 @@ const Header = (props) => {
             </li>  */}
             {
               !cookies.user?
-              <li>
-                <Link to="/Agency">Agency Login</Link>
+              <li style={{marginRight:"70px"}}>
+                <Link to="/Agency">Agency</Link>
                 </li>:null
               }
             

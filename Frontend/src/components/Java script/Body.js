@@ -56,7 +56,7 @@ import img3 from "../../img3.png";
 
     <>
     <Header/>
-    <div className="body">
+    <div className="body" id="Imgback">
     <div>
       <div className="card">
         <marquee>
@@ -85,19 +85,17 @@ import img3 from "../../img3.png";
         <div className="mySlides fade">
           <div className="numbertext">1 / 3</div>
           <img src={img1} style={{ width: "100%" }} />
-          <div className="text">Caption Text</div>
         </div>
 
         <div className="mySlides fade">
           <div className="numbertext">2 / 3</div>
           <img src={img2} style={{ width: "100%" }} />
-          <div className="text">Caption Two</div>
+        
         </div>
 
         <div className="mySlides fade">
           <div className="numbertext">3 / 3</div>
           <img src={img3} style={{ width: "100%" }} />
-          <div className="text">Caption Three</div>
         </div>
 
         <a className="prev" onClick={() => plusSlides(-1)}>
