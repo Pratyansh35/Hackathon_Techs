@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../logo.png";
+import logo from "../../logo2.png";
 import { Link } from "react-router-dom";
 import "../css/Header.css";
 import { CookiesProvider, useCookies,Cookies} from "react-cookie";
@@ -10,25 +10,25 @@ import browser from 'react-cookie'
 const Header = (props) => {
   const [cookies, setCookie,removeCookie] = useCookies(["user"]);
   const [pos,setPos]=useState("");
- 
+  useEffect(()=>{
+    setPos("absolute")
+  },[])
 
   return (
     <>
       <header>
-        <div className="logo">
+        <div className="logo1">
           <img
             src={logo}
-
             alt="Logo"
-            style={{ width: "100px", height: "auto", marginLeft:"10px"}}
           />
          </div>
          <div className="heading3">
          <div className="heading2">
-          <h2>MINISTRY OF HOME AFFAIRS</h2>
+          <h2>DISASTER RESCUE WAVE</h2>
           </div>
         <div className="heading">
-          <span className="heading">Disaster Rescue Wave</span>
+          <span className="heading">Ministry Of Home Affaires</span>
         </div> 
         </div>
         <CookiesProvider>
@@ -48,31 +48,26 @@ const Header = (props) => {
             
               <Link to="/about">About</Link>
             </li>
-            
+            <li>
               {
                 cookies.user?
-                <li>
-                <Link to="/AgencyForm">Agency Form</Link> 
-                </li>  :null
+                <Link to="/AgencyForm">Agency Form</Link> : null
+                // checklog()
               }
               
-            
-            
+            </li>  
+            <li>
               {
               cookies.user?
-              <li>
-              <Link to="/AgentMap">Map</Link>
-              </li> : null
+              <Link to="/AgentMap">Map</Link> : null
               }
-            
-            
+            </li>
+            <li>
               {
               cookies.user?
-              <li>
-              <Link to="/ReportMap">Reported cases</Link>
-              </li> : null
+              <Link to="/ReportMap">Reported cases</Link> : null
               }
-              
+              </li>
             {/* <li class="topDiv">
               <Link to="/AgencyForm">Agency Form</Link>
             </li>   */}
@@ -82,25 +77,21 @@ const Header = (props) => {
             {/* <li class="topDiv">
               <Link to="/ReportMap">Reported cases</Link>
             </li>  */}
-            {
+            <li>{
               !cookies.user?
-              <li>
-                <Link to="/Agency">Agency Login</Link>
-                </li>:null
+                <Link to="/Agency">Agency Login</Link>:null
               }
-            
-            
+            </li>
+            <li>
               {
                 cookies.user?
-                <li>
                 <button style={{width:"100px",background:"rgb(255, 128, 0)",marginRight:"50px"}} onClick={()=>{
                 // cookies.remove('name', { path: '/'});
                 // browser.cookies.removeCookie("user")
                 // cookies.remove("user");
-                }}>log out</button>
-                </li>:null
+              }}>log out</button>:null
               }
-            
+            </li>
           </ul>
           </div>
         </nav>
