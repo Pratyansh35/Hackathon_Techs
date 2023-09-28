@@ -10,9 +10,7 @@ import browser from 'react-cookie'
 const Header = (props) => {
   const [cookies, setCookie,removeCookie] = useCookies(["user"]);
   const [pos,setPos]=useState("");
-  useEffect(()=>{
-    setPos("absolute")
-  },[])
+ 
 
   return (
     <>
@@ -50,26 +48,31 @@ const Header = (props) => {
             
               <Link to="/about">About</Link>
             </li>
-            <li>
+            
               {
                 cookies.user?
-                <Link to="/AgencyForm">Agency Form</Link> : null
-                // checklog()
+                <li>
+                <Link to="/AgencyForm">Agency Form</Link> 
+                </li>  :null
               }
               
-            </li>  
-            <li>
+            
+            
               {
               cookies.user?
-              <Link to="/AgentMap">Map</Link> : null
+              <li>
+              <Link to="/AgentMap">Map</Link>
+              </li> : null
               }
-            </li>
-            <li>
+            
+            
               {
               cookies.user?
-              <Link to="/ReportMap">Reported cases</Link> : null
+              <li>
+              <Link to="/ReportMap">Reported cases</Link>
+              </li> : null
               }
-              </li>
+              
             {/* <li class="topDiv">
               <Link to="/AgencyForm">Agency Form</Link>
             </li>   */}
@@ -79,21 +82,25 @@ const Header = (props) => {
             {/* <li class="topDiv">
               <Link to="/ReportMap">Reported cases</Link>
             </li>  */}
-            <li>{
+            {
               !cookies.user?
-                <Link to="/Agency">Agency Login</Link>:null
+              <li>
+                <Link to="/Agency">Agency Login</Link>
+                </li>:null
               }
-            </li>
-            <li>
+            
+            
               {
                 cookies.user?
+                <li>
                 <button style={{width:"100px"}} onClick={()=>{
                 // cookies.remove('name', { path: '/'});
                 // browser.cookies.removeCookie("user")
                 // cookies.remove("user");
-              }}>log out</button>:null
+              }}>log out</button>
+              </li>:null
               }
-            </li>
+            
           </ul>
           </div>
         </nav>
