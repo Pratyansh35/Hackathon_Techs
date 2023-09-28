@@ -9,14 +9,14 @@ export default function Video() {
     {
       
       embedUrl: 'https://www.youtube.com/embed/im4DI6UNzIA?si=IDD3zdXv5XGOTo_e" title="YouTube video player',
-      title: 'flood',
+      title: 'Flooding and flood awareness',
     },
     {
       title: 'earthquake',
       embedUrl: 'https://www.youtube.com/embed/BLEPakj1YTY?si=J4Rt67rnRc4e2Pt_',
     },
     {
-      title: 'flood',
+      title: 'Flood safety',
       embedUrl: 'https://www.youtube.com/embed/SgScj6-NzQg?si=nWiY7_rSpJQtFsNf',
 
     },
@@ -51,14 +51,14 @@ export default function Video() {
 
     },
     {
-      title: 'flood',
+      title: 'What to do during and after flood',
       embedUrl: 'https://www.youtube.com/embed/HYIXcvshlYo?si=X-dl8vn6DHa6tu2A',
 
     },
     {
       
       embedUrl: 'https://www.youtube.com/embed/im4DI6UNzIA?si=IDD3zdXv5XGOTo_e" title="YouTube video player',
-      title: 'flood',
+      title: 'Flood safety measures',
     },
     {
       title: 'earthquake',
@@ -71,7 +71,7 @@ export default function Video() {
 
     },
     {
-      title: 'flood',
+      title: 'flooding :be prepared',
       embedUrl: 'https://www.youtube.com/embed/LiZ5hryi2Sw?si=fW6JVG3F6_25UUXH',
      
     },

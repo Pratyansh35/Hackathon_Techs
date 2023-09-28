@@ -3,6 +3,8 @@ import {GoogleMap,useLoadScript,MarkerF} from '@react-google-maps/api';
 import axios from 'axios'
 import '../css/agencymap.css'
 import Header from "./Header";
+import "../css/Map.css"
+
 const AgencyMapComponent=()=>{
 
     const [agencydetails,setagentdetails]=useState([])
@@ -47,16 +49,16 @@ const AgencyMapComponent=()=>{
                 {
                     agencydetails.map(agency=>{
                         return <div className="agencycard">
-                            <label>Agency Name : {agency.agencyname}</label>
-                            <label>City : {agency.city}</label>
-                            <label>State : {agency.state}</label>
-                            <label>Address : {agency.address}</label>
-                            <label>Specialized : {
+                            <label className="labbelname">Agency Name : {agency.agencyname}</label>
+                            <label  className="labbel">City : {agency.city}</label>
+                            <label className="labbel">State : {agency.state}</label>
+                            <label className="labbel">Address : {agency.address}</label>
+                            <label className="labbel">Specialized : {
                                 agency.specializedarea.map(e=>{
                                     return <label>{e}</label>
                                 })
                                 }</label>
-                            <label>Resources : {
+                            <label className="labbelres">Resources : {
                                 agency.resources.map(e=>{
                                     return <div>
                                         <label>Resource Type : {e.resourcetype}</label>

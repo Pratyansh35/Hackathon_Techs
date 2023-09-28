@@ -12,12 +12,14 @@ const Header = (props) => {
 
 
 
+// const Header = () => {
   return (
     <>
       <header>
         <div className="logo">
           <img
             src={logo}
+
             alt="Logo"
             style={{ width: "100px", height: "auto", marginLeft:"10px"}}
           />
@@ -32,12 +34,19 @@ const Header = (props) => {
         </div>
         <CookiesProvider>
         <nav class='navbarr'>
+        <nav class='dropdown'>
+          
+          <div className="dropbtn">
+          </div>
+          <div className="dropdown-content" id="navItems">
           <ul>
-            <li>
+            <li class="topDiv">
+            
               <Link to="/">Home</Link>
             </li>
             
-            <li>
+            <li class="topDiv">
+            
               <Link to="/about">About</Link>
             </li>
             <li>
@@ -59,8 +68,16 @@ const Header = (props) => {
               cookies.user?
               <Link to="/ReportMap">Reported cases</Link> : null
               }
-              
-            </li> 
+              </li>
+            {/* <li class="topDiv">
+              <Link to="/AgencyForm">Agency Form</Link>
+            </li>   */}
+            {/* <li class="topDiv">
+              <Link to="/AgentMap">Map</Link>
+            </li>  */}
+            {/* <li class="topDiv">
+              <Link to="/ReportMap">Reported cases</Link>
+            </li>  */}
             <li>{
               !cookies.user?
                 <Link to="/Agency">Agency Login</Link>:null
@@ -77,6 +94,8 @@ const Header = (props) => {
               }
             </li>
           </ul>
+          </div>
+        </nav>
         </nav>
         </CookiesProvider>
       </header>
