@@ -7,6 +7,7 @@ import img1 from "../../img1.jpg";
 import img2 from "../../img2.jpg";
 import img3 from "../../img3.png";
 
+
  function Body() {
   const [warningText, setWarningText] =useState("Hurry up!!! You are not in a safe zone you, need to evacute quickly form the place");
   const chagetext = () => {
