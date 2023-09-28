@@ -29,8 +29,11 @@ input[type=submit] {
   margin-top: 50px;
   align-items: center;
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #dbd5d5;
   padding: 20px;
+  border: 2px solid black;
+  box-shadow: 3px 5px 3px 5px;
+  
 }
 
 .left_rightdiv{
@@ -39,28 +42,35 @@ input[type=submit] {
 
 .VolunteerReg {
   border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  padding-top: 100px;
+    background-image: linear-gradient(45deg, #ffcdcd, transparent);
+    border: 3px solid black;
+    padding: 20px;
+    padding-top: 100px;
+    font-size: x-large;
 }
+
 .leftDiv{
   
   text-align: center;
   background-color: #04AA6D;
   margin-top: 20px;
   border-radius: 5px;
-  width: 200px; 
-  height: 50px;
-  float:left;
+  width: 40%;
+  height: 80px;
+  margin: 20px 80px;
+  font-size: xx-large;
+
 }
 .rightDiv{
   margin-top: 20px;
   text-align: center;
-  background-color: aqua;
-  width: 200px; 
+  background-color: rgba(248, 75, 27,0.7);
+  width: 40% ;
+  height: 80px;
   border-radius: 5px;
-  height: 50px;
-  float: right;
+ margin: 20px auto;
+ font-size: xx-large;
+
 }
 
 

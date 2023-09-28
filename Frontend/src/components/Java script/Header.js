@@ -93,12 +93,12 @@ const Header = (props) => {
               {
                 cookies.user?
                 <li>
-                <button style={{width:"100px"}} onClick={()=>{
+                <button style={{width:"100px",background:"rgb(255, 128, 0)",marginRight:"50px"}} onClick={()=>{
                 // cookies.remove('name', { path: '/'});
                 // browser.cookies.removeCookie("user")
                 // cookies.remove("user");
-              }}>log out</button>
-              </li>:null
+                }}>log out</button>
+                </li>:null
               }
             
           </ul>
