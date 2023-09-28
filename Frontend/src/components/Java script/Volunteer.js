@@ -15,7 +15,7 @@ export default function Volunteer() {
         setOneposition("relative");
         setSecondposition("absolute");
         setdataheight("0px");
-        axios.get("http://localhost:4000/getreportdata")
+        axios.get("http://localhost:4000/getagencydetails")
         .then(res=>{
             setDisasterData(res.data)
         })
@@ -81,12 +81,24 @@ export default function Volunteer() {
                     {
                         disasterData.map(e=>{
                             return <div className="detail-container">
-                                <label>Name : {e.name}</label>
-                                <label>Phone Number : {e.phone}</label>
-                                <label>Disaster Type : {e.disaster_type}</label>
-                                <label>Address : {e.address}</label>
-                                <label>State : {e.state}</label>
+                                <label>Agency Name : {e.agencyname}</label>
                                 <label>City : {e.city}</label>
+                                <label>State : {e.state}</label>
+                                <label>Address : {e.address}</label>
+                                <label>Expertise : {
+                                    e.specializedarea.map(e1=>{
+                                        return <label>{e1}</label>
+                                    })
+                                    }</label>
+                                <label>Resources : {
+                                    e.resources.map(resource=>{
+                                        return <div>
+                                            <label>Type : {resource.resourcetype}</label>
+                                            <label>Volunteers Required : {Math.round(Math.random()*10)}</label>
+                                        </div>
+                                    })
+                                    }</label>
+                                <button>Assist</button>
                             </div>
 
                         })

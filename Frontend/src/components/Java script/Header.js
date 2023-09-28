@@ -11,8 +11,6 @@ const Header = (props) => {
   const [cookies, setCookie,removeCookie] = useCookies(["user"]);
 
 
-
-// const Header = () => {
   return (
     <>
       <header>
