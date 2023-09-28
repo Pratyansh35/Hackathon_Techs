@@ -64,7 +64,7 @@ export default function Agency() {
                 alert("logged in successfully")
                 setlog("loggedin")
                 setCookie("user", "loggedin");
-                navigate("/");
+                navigate("/AgentMap");
             }
             else{
                 alert("enter correct username and password")
