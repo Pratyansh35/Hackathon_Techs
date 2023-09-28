@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../css/AgencyRegister.css'
 import axios from 'axios';
+import Header from './Header';
 const AgencyForm=()=>{
 
     // var specarr=[];
@@ -74,6 +75,7 @@ const AgencyForm=()=>{
     }
     return (
         <div>
+            <Header/>
             <form action="action_page.php" class='formag' >
                     <div>
                         <label>Agency Name : </label>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "../css/Volunteer.css";
 import axios from 'axios'
+import Header from './Header';
 export default function Volunteer() {
        const [visibility,setVisibility]=useState("");
        const [oneposition,setOneposition]=useState("")
@@ -20,7 +21,8 @@ export default function Volunteer() {
         })
        },[])
     return (
-
+        <>
+        <Header/>
         <div class="reg_volunteer">
         <div className='left_rightdiv'>
             {/* <div class="leftDiv" id='leftDiv'>
@@ -93,5 +95,6 @@ export default function Volunteer() {
 
             </div>
         </div>
+        </>
     )
 }

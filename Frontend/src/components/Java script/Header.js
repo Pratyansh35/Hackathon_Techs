@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "../../logo.png";
 import { Link } from "react-router-dom";
 import "../css/Header.css";
+import { CookiesProvider, useCookies,Cookies} from "react-cookie";
+import browser from 'react-cookie'
+// import Cookies from 'js-cookie'
 
-const Header = () => {
+
+const Header = (props) => {
+  const [cookies, setCookie,removeCookie] = useCookies(["user"]);
+
+
+
   return (
     <>
       <header>
@@ -22,6 +30,7 @@ const Header = () => {
           <span className="heading">Disaster Rescue Wave</span>
         </div> 
         </div>
+        <CookiesProvider>
         <nav class='navbarr'>
           <ul>
             <li>
@@ -32,16 +41,44 @@ const Header = () => {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/AgencyForm">Agency Form</Link>
+              {
+                cookies.user?
+                <Link to="/AgencyForm">Agency Form</Link> : null
+                // checklog()
+              }
+              
             </li>  
             <li>
-              <Link to="/AgentMap">Map</Link>
-            </li> 
+              {
+              cookies.user?
+              <Link to="/AgentMap">Map</Link> : null
+              }
+            </li>
             <li>
-              <Link to="/ReportMap">Reported cases</Link>
+              {
+              cookies.user?
+              <Link to="/ReportMap">Reported cases</Link> : null
+              }
+              
             </li> 
+            <li>{
+              !cookies.user?
+                <Link to="/Agency">Agency Login</Link>:null
+              }
+            </li>
+            <li>
+              {
+                cookies.user?
+                <button style={{width:"100px"}} onClick={()=>{
+                // cookies.remove('name', { path: '/'});
+                // browser.cookies.removeCookie("user")
+                // cookies.remove("user");
+              }}>log out</button>:null
+              }
+            </li>
           </ul>
         </nav>
+        </CookiesProvider>
       </header>
     </>
   );

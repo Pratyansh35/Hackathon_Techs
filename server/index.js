@@ -23,6 +23,8 @@ app.use("/",getAgencyRoute);
 
 //For Login Details
 app.use("/",AgencyLoginRouter);
+
+
 app.listen(4000,()=>{
     console.log("server is up")
 })

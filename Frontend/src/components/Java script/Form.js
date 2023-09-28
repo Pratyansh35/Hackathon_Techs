@@ -4,6 +4,8 @@ import axios from "axios";
 import "../css/Form.css";
 import {Link} from 'react-router-dom'
 import {useNavigate} from 'react-router-dom'
+import Header from './Header';
+
 export default function Form() {
 
   const navigate=useNavigate();
@@ -104,8 +106,7 @@ export default function Form() {
 
   return (
     <div>
-
-
+      <Header/>
       <div className="container1">
         <div className="map-container">
           <GoogleMapReact

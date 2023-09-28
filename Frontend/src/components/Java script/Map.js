@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import {GoogleMap,useLoadScript,MarkerF} from '@react-google-maps/api';
 import axios from 'axios'
 import '../css/agencymap.css'
+import Header from "./Header";
 const AgencyMapComponent=()=>{
 
     const [agencydetails,setagentdetails]=useState([])
@@ -23,6 +24,8 @@ const AgencyMapComponent=()=>{
     if(loadError) return "Error";
     if(!isLoaded) return "Maps"
     return(
+        <>
+            <Header/>
         <div className="agency-main">
             <div className="left-part-agent">
                 <GoogleMap
@@ -67,6 +70,7 @@ const AgencyMapComponent=()=>{
                 }
             </div>
         </div>
+        </>
     )
 }
 

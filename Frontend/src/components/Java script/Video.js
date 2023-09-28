@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/Video.css';
+import Header from './Header';
 export default function Video() {
   
   const [searchTerm, setSearchTerm] = useState('');
@@ -99,6 +100,7 @@ export default function Video() {
 
   return (
     <>
+    <Header/>
       <div className="search">
         <input
           className="input"

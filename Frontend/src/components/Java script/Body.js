@@ -2,6 +2,7 @@ import React from "react";
 import "../css/Body.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Header from './Header';
 
 
 export default function Body() {
@@ -14,6 +15,7 @@ export default function Body() {
   return (
 
     <>
+    <Header/>
     <div className="body">
     <div className="Imgback">
       <div className="card">

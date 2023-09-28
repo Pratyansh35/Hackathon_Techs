@@ -4,6 +4,7 @@ import {loc} from "./Locations.js";
 // import blueloclogo from '../images/smallbluenavlogo.png'
 import Details from "./Detail.js";
 import '../css/Map.css'
+import Header from "./Header.js";
 const MapComponent = ()=>{
     const [latitude,setLatitude]=useState();
     const [longitude,setLongitude]=useState();
@@ -268,6 +269,8 @@ const MapComponent = ()=>{
     if(!isLoaded) return "Maps";
     
     return (
+        <>
+        <Header/>
         <div className="main-container">
             <div>
                 <GoogleMap
@@ -372,6 +375,7 @@ const MapComponent = ()=>{
                 </div>
             </div>
         </div>
+        </>
         
     )
 }
