@@ -15,10 +15,11 @@
 
 .location-info {
   flex: 1; 
-  padding: 20px;
   border: 1px solid #ccc;
   background-color: #f8f8f8;
-  margin-bottom: 31px;
+  margin-bottom: 30px;
+  margin-left: 5px;
+  padding-bottom: 10px;
 }
 button{
   margin-top: 2%;

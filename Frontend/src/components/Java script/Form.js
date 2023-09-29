@@ -158,12 +158,15 @@ export default function Form() {
                 <label>State : Punjab</label>
               </div>
               {/* <Link to="/"><button onClick={savedata}>Submit</button></Link> */}
-              <button onClick={()=>{
+              
+                <div class="row"  onClick={()=>{
                 (name==="" || phone==="" || address==="" || disaster_type==="select")?
                 alert("enter all fields"):
                 savedata()
               }
-                }>Submit</button>
+                }>
+                        <input type="submit" value="Submit"></input>
+                    </div>
         </div>
 
 
