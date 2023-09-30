@@ -3,8 +3,8 @@ import logo from "../../logo2.png";
 import { Link } from "react-router-dom";
 import "../css/Header.css";
 import { CookiesProvider, useCookies,Cookies} from "react-cookie";
-import browser from 'react-cookie'
 // import Cookies from 'js-cookie'
+
 
 
 const Header = (props) => {
@@ -97,6 +97,7 @@ const Header = (props) => {
                 // cookies.remove('name', { path: '/'});
                 // browser.cookies.removeCookie("user")
                 // cookies.remove("user");
+                document.cookie = 'user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
                 }}>log out</button>
                 </li>:null
               }
