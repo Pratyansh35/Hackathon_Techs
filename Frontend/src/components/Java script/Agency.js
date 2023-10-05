@@ -79,7 +79,7 @@ export default function Agency() {
             <div class="loginDiv" id='loginDiv' style={{visibility:lvis,position:lpos}}>
                 <h1>Login</h1>
 
-                    <p>Please fill in this form to create an account.</p>
+                    <p>Please fill in this form to Log-in.</p>
                     <hr/>
                     <label for="email"><b>Email</b></label>
                     <input type="text" placeholder="Enter Email" name="email"  required onChange={e=>setEmail(e.target.value)}/>
@@ -91,7 +91,7 @@ export default function Agency() {
                     <p>By creating an account you agree to our <a href="#" style={{ color: "dodgerblue" }}>Terms & Privacy</a>.</p>
                     <p style={{float:"right"}} onClick={changtor}>Haven't Registered yet? <a style={{ color: "dodgerblue" }}>SignUp</a>.</p>
                     </div>
-                    <div class="clearfix">
+                    <div className='btns'>
                         <button id="signUpbtn" onClick={checkagency} class="signupbtn">Log in</button>
                     </div>
                     

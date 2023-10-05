@@ -140,7 +140,7 @@ export default function Form() {
                 <label>Address : </label>
                 <input type="text" required onChange={e=>setAddress(e.target.value)}placeholder="Address.."/>
               </div>
-              <div>
+              <div style={{marginBottom:18}}>
                 <label>Disaster Type : </label>
                 <select onChange={e=>setdistype(e.target.value)}>
                   <option value="select">select</option>
