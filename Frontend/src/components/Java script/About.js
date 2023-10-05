@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import img1 from "../../img1.jpg";
 import img2 from "../../img2.jpg";
 import img3 from "../../img3.png";
-import emailicn from "../../email_icon2.gif";
 import Header from "./Header";
+import Footer from './footers';
 import "../css/About.css";
 
 const About = () => {
@@ -81,29 +81,7 @@ const About = () => {
         <span className="dot" onClick={() => currentSlide(2)}></span>
         <span className="dot" onClick={() => currentSlide(3)}></span>
       </div>
-      <footer>
-        <div className="footer-div">
-          <ul style={{fontWeight:"bold",fontSize:"20px"}}>USEFULL LINKS</ul>
-          <ul>About</ul>
-          <ul>Services</ul>
-          <ul>Our Team</ul>
-          <ul>Contact</ul>
-        </div>
-        <div className="footer-div">
-          <h2>CONTRIBUTION</h2>
-          <div>
-            <input type="text" placeholder="Your Email Address" style={{ width: "70%",textAlign:"center",margin:"5px" }}/>
-          </div>
-          <button class='subcribebtn'>subscribe</button>
-
-        </div>
-        <div className="footer-div">
-        <ul style={{fontWeight:"bold",fontSize:"20px"}}>CONTACT</ul>
-          <pre style={{marginLeft:"15px"}}>144401, Innovative Studio,  L.P.U,<br/><br/>Phagwara, Punjab  0182 451 0311 </pre>
-          <img src={emailicn} alt="email image" />
-
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 };

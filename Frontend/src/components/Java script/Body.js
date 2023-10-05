@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import "../css/Body.css";
 import { Link } from "react-router-dom";
 import Header from './Header';
+import Footer from './footers';
 import "../css/About.css";
 import img1 from "../../img1.jpg";
 import img2 from "../../img2.jpg";
 import img3 from "../../img3.png";
+
 
 
  function Body() {
@@ -112,7 +114,7 @@ import img3 from "../../img3.png";
         <span className="dot" onClick={() => currentSlide(2)}></span>
         <span className="dot" onClick={() => currentSlide(3)}></span>
       </div>
-        
+        <Footer/>
     </>
   )
 

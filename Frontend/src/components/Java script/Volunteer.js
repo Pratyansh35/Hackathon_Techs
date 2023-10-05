@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "../css/Volunteer.css";
 import axios from 'axios'
 import Header from './Header';
+import Footer from './footers';
 export default function Volunteer() {
        const [visibility,setVisibility]=useState("");
        const [oneposition,setOneposition]=useState("")
@@ -107,6 +108,7 @@ export default function Volunteer() {
 
             </div>
         </div>
+        <Footer/>
         </>
     )
 }
