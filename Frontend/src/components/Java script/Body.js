@@ -15,6 +15,16 @@ import img3 from "../../img3.png";
   const chagetext = () => {
     setWarningText("You are in a safe zone")
   }
+  const [n, setN] = useState(1);
+  
+    useEffect(() => {
+      const intervalId = setInterval(() => {
+        setN(3);
+      }, 5000);
+  
+      return () => clearInterval(intervalId);
+    }, []);
+  
   const [slideIndex, setSlideIndex] = useState(1);
   useEffect(() => {
     showSlides(slideIndex);
@@ -24,7 +34,7 @@ import img3 from "../../img3.png";
   function plusSlides(n) {
     setSlideIndex((slideIndex) => slideIndex + n);
   }
-
+ 
   // Thumbnail image controls
   function currentSlide(n) {
     setSlideIndex(n);

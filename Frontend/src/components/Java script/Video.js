@@ -2,21 +2,21 @@ import React, { useState } from 'react';
 import '../css/Video.css';
 import Header from './Header';
 export default function Video() {
-  
+
   const [searchTerm, setSearchTerm] = useState('');
   const [videos, setVideos] = useState([
-  
+
     {
-      
-      embedUrl: 'https://www.youtube.com/embed/im4DI6UNzIA?si=IDD3zdXv5XGOTo_e" title="YouTube video player',
-      title: 'flood',
+
+      embedUrl: 'https://www.youtube.com/embed/im4DI6UNzIA?si=IDD3zdXv5XGOTo_e',
+      title: 'Servive in flood',
     },
     {
       title: 'How to protect yourself during an earthquake',
       embedUrl: 'https://www.youtube.com/embed/BLEPakj1YTY?si=J4Rt67rnRc4e2Pt_',
     },
     {
-      title: 'flood',
+      title: 'Servive in flood',
       embedUrl: 'https://www.youtube.com/embed/SgScj6-NzQg?si=nWiY7_rSpJQtFsNf',
 
     },
@@ -51,14 +51,14 @@ export default function Video() {
 
     },
     {
-      title: 'flood',
+      title: 'Servive in flood',
       embedUrl: 'https://www.youtube.com/embed/HYIXcvshlYo?si=X-dl8vn6DHa6tu2A',
 
     },
     {
-      
+
       embedUrl: 'https://www.youtube.com/embed/im4DI6UNzIA?si=IDD3zdXv5XGOTo_e" title="YouTube video player',
-      title: 'flood',
+      title: 'Servive in flood',
     },
     {
       title: 'Earthquake Prevention Measures',
@@ -66,24 +66,25 @@ export default function Video() {
     },
 
     {
-      title: '360° tsunami wave',
+
       embedUrl: 'https://www.youtube.com/embed/P1HX9Uh8OUg?si=1NerDz8WWi4q34Er',
-
+      title: '360° tsunami wave',
     },
     {
-      title: 'flood',
+
       embedUrl: 'https://www.youtube.com/embed/LiZ5hryi2Sw?si=fW6JVG3F6_25UUXH',
-     
+      title: 'Servive in flood',
     },
     {
-      title: 'Drought prevention strategy',
-      embedUrl: 'https://www.youtube.com/embed/5qMl5UDQkZc?si=bwnYRlbpMztd4kvc',
 
+      embedUrl: 'https://www.youtube.com/embed/5qMl5UDQkZc?si=bwnYRlbpMztd4kvc',
+      title: 'Drought prevention strategy',
     },
-   
+
     {
-      title: 'Drought: Be Prepared',
+
       embedUrl: 'https://www.youtube.com/embed/gmz8sFN2CeA?si=ZWJ73eV_7WUSRvSY',
+      title: 'Drought: Be Prepared',
     },
   ]);
 
@@ -100,10 +101,11 @@ export default function Video() {
 
   return (
     <>
-    <Header/>
+      <Header />
       <div className="search">
-        <input
-          className="input"
+        <input style={{
+          margin: "5px 5px 5px 0"
+        }} className="input"
           type="text"
           placeholder="Search"
           value={searchTerm}
@@ -114,25 +116,24 @@ export default function Video() {
               setSearchTerm('');
             }
           }}
-          
+
         />
-        <button className="btn" onClick={handleSearch}>
-          Search
-        </button>
+
+        <input type="submit" onClick={handleSearch} value="Search"></input>
       </div>
 
       <div className="video-list">
         {videos.map((video, index) => (
           <div key={index} className="video-item">
-            <h3>{video.title}</h3>
+            
             <iframe
-              width="560"
-              height="315"
+              // width="560"
+              // height="315"
               src={video.embedUrl}
-              frameBorder="0"
               allowFullScreen
               title={video.title}
             ></iframe>
+            <h3 style={{float:"left"}}>{video.title}</h3>
           </div>
         ))}
       </div>
