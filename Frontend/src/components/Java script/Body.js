@@ -15,15 +15,22 @@ import img3 from "../../img3.png";
   const chagetext = () => {
     setWarningText("You are in a safe zone")
   }
-  const [n, setN] = useState(1);
   
-    useEffect(() => {
-      const intervalId = setInterval(() => {
-        setN(3);
-      }, 5000);
-  
-      return () => clearInterval(intervalId);
-    }, []);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setSlideIndex((prevIndex) => {
+        if (prevIndex === 3) {
+          return 1;
+        } else {
+          return prevIndex + 1;
+        }
+      });
+    }, 5000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
   
   const [slideIndex, setSlideIndex] = useState(1);
   useEffect(() => {
@@ -78,7 +85,6 @@ import img3 from "../../img3.png";
         </p>
         <button className="card-btn" onClick={chagetext}>Learn More</button> */}
       </div>
-      
       
       <div className="container">
 
