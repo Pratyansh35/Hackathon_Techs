@@ -274,7 +274,7 @@ const MapComponent = ()=>{
         <>
         <Header/>
         <div className="main-container">
-            <div>
+            <div style={{width:"60%", height:"660px", marginTop:"10px"}}>
                 <GoogleMap
                 mapContainerClassName="mapcontainer"
                 center={{lat:20.5937,lng:78.9629}}
@@ -298,17 +298,19 @@ const MapComponent = ()=>{
                 </GoogleMap>
             </div>
             <div className="right">
+                <div className="resetbtn-container">
                 <button className="resetbtn" onClick={reset}>Get All Locations</button>
-                <div className="places">
-                    <label >Nearest state:{nearbylocstate}</label>
-                    <label >Nearest city:{nearbyloccity}</label>
                 </div>
-                <div className="filterhead">
+                <div className="places">
+                    <label >Nearest state:  {nearbylocstate}</label>
+                    <label >Nearest city:  {nearbyloccity}</label>
+                </div>
+                {/* <div className="filterhead">
                     <label >Disaster Type:</label>
                     <label >Resource Type:</label>
-                </div>
+                </div> */}
                 <div className="filters">
-                    <select value={disvalue} onChange={e=>{
+                <label >Disaster Type:</label>   <select value={disvalue} style={{marginRight:"20px"}}  onChange={e=>{
                         disastervalue=e.target.value;
                         setDisvalue(e.target.value)
                         if(!isreset && e.target.value=="All"){
@@ -337,7 +339,7 @@ const MapComponent = ()=>{
                             })
                         }
                     </select>
-                    <select disabled={!enable} value={resourcevalue} onChange={e=>{
+                    <label >Resource Type:</label>   <select disabled={!enable} value={resourcevalue} onChange={e=>{
                         resvalue=e.target.value;
                         setResourcevalue(e.target.value);
                         if(e.target.value=="All"){
