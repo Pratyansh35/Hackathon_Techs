@@ -81,27 +81,45 @@ export default function Volunteer() {
                 <div style={{visibility:datavisibility,position:secondposition,height:dataheight}}>
                     {
                         disasterData.map(e=>{
-                            return <div className="detail-container">
-                                <label>Agency Name : {e.agencyname}</label>
-                                <label>City : {e.city}</label>
-                                <label>State : {e.state}</label>
-                                <label>Address : {e.address}</label>
-                                <label>Expertise : {
-                                    e.specializedarea.map(e1=>{
-                                        return <label>{e1}</label>
-                                    })
-                                    }</label>
-                                <label>Resources : {
-                                    e.resources.map(resource=>{
-                                        return <div>
-                                            <label>Type : {resource.resourcetype}</label>
-                                            <label>Volunteers Required : {Math.round(Math.random()*10)}</label>
-                                        </div>
-                                    })
-                                    }</label>
-                                <button>Assist</button>
+                            return <div class="detail-container">
+                            <div class="detail-row">
+                                <span class="label">Agency Name:</span>
+                                <span class="value">{e.agencyname}</span>
                             </div>
-
+                            <div class="detail-row">
+                                <span class="label">City:</span>
+                                <span class="value">{e.city}</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">State:</span>
+                                <span class="value">{e.state}</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Address:</span>
+                                <span class="value">{e.address}</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Expertise:</span>
+                                <span class="value">
+                                    {e.specializedarea.map(e1 => <span>{e1}</span>)}
+                                </span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Resources:</span>
+                                <span class="value">
+                                    {e.resources.map(resource => (
+                                        <div class="resource">
+                                            <span>Type: {resource.resourcetype}</span>
+                                            <span>Volunteers Required: {Math.round(Math.random() * 10)}</span>
+                                        </div>
+                                    ))}
+                                </span>
+                            </div>
+                            <div class="detail_btn" >
+                            <button class="assist-button" >Assist</button>
+                            </div>
+                        </div>
+                        
                         })
                     }
                 </div>

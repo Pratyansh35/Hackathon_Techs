@@ -119,7 +119,7 @@ export default function Agency() {
                     <p>By creating an account you agree to our <a href="#" style={{ color: "dodgerblue" }}>Terms & Privacy</a>.</p>
                     <p style={{float:"right"}} onClick={changetol}>Already Registered <a style={{ color: "dodgerblue"}}>Login</a>.</p>
                     </div>
-                    <div class="clearfix">
+                    <div class="agency_btn">
                         <button id="cancelbtn" type="button" class="cancelbtn">Cancel</button>
                         <button id="signUpbtn" onClick={RegisterAgency} class="signupbtn">Sign Up</button>
                     </div>

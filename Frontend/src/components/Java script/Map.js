@@ -27,10 +27,10 @@ const AgencyMapComponent=()=>{
         <>
             <Header/>
         <div className="agency-main">
-            <div className="left-part-agent">
+            <div className="left-part-agent" style={{width:"50%"}}>
                 <GoogleMap
                 onLoad={onMapLoad}
-                mapContainerStyle={{width:"1000px",height:"800px",margin:"20px"}}
+                mapContainerStyle={{width:"100%",height: "600px",margin:"20px"}}
                 center={{lat:20.5937,lng:78.9629}}
                 zoom={5.2}>
 
@@ -48,25 +48,27 @@ const AgencyMapComponent=()=>{
                 {
                     agencydetails.map(agency=>{
                         return <div className="agencycard">
-                            <label>Agency Name : {agency.agencyname}</label>
-                            <label>City : {agency.city}</label>
-                            <label>State : {agency.state}</label>
-                            <label>Address : {agency.address}</label>
-                            <label>Specialized : {
-                                agency.specializedarea.map(e=>{
-                                    return <label>{e}</label>
-                                })
-                                }</label>
-                            <label>Resources : {
-                                agency.resources.map(e=>{
-                                    return <div>
-                                        <label>Resource Type : {e.resourcetype}</label>
-                                        <label>Count : {e.count}</label>
-                                        <label>Man Power : {e.manpower}</label>
+                        <label className="agency-label">Agency Name: {agency.agencyname}</label>
+                        <label className="agency-label">City: {agency.city}</label>
+                        <label className="agency-label">State: {agency.state}</label>
+                        <label className="agency-label">Address: {agency.address}</label>
+                        <label className="agency-label">Specialized: {
+                            agency.specializedarea.map(e => {
+                                return <label className="specialized-label">{e}</label>;
+                            })
+                        }</label>
+                        <label className="agency-label">Resources: {
+                            agency.resources.map(e => {
+                                return (
+                                    <div className="resource">
+                                        <label className="resource-label">Resource Type: {e.resourcetype}</label>
+                                        <label className="resource-label">Count: {e.count}</label>
+                                        <label className="resource-label">Man Power: {e.manpower}</label>
                                     </div>
-                                })
-                            }</label>
-                            </div>
+                                );
+                            })
+                        }</label>
+                    </div>
                     })
                 }
             </div>

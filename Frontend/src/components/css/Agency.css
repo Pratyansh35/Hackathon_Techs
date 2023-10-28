@@ -24,12 +24,10 @@ hr {
 .cancelbtn, .signupbtn {
   background-color: #04AA6D;
   color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
   opacity: 0.9;
+  border-radius: 8%;
 }
 
 .cancelbtn,.signupbtn:hover {
@@ -38,23 +36,23 @@ hr {
 
 /* Extra styles for the cancel button */
 .cancelbtn {
-  padding: 14px 20px;
   background-color: #f44336;
 }
 
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
   font-size: 10px;
-    float: left;
-  width: 50%;
+  margin: 25px;
+  width: 100px;
+  height: 40px;
 }
 
 /* Add padding to container elements */
 .SignUpDiv , .loginDiv {
   margin-right: 10%;
   margin-left: 10%;
-    margin-top: 100px;
-    margin-bottom: 50px;
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 /* Clear floats */
@@ -69,4 +67,13 @@ hr {
   .cancelbtn, .signupbtn {
     width: 100%;
   }
+}
+
+.agency_btn{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
 }

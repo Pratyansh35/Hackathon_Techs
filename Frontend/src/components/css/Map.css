@@ -1,11 +1,11 @@
 .main-container{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 50%;
 }
 .mapcontainer{
-    width: 60vw;
-    height: 600px;
+    width: 50%;
+    height: 460px;
     margin: 5px 20px;
     box-shadow: 1px 1px 10px grey;
 }
@@ -16,6 +16,53 @@
     gap: 5px;
     width: 35%;
     padding: 10px;
+}
+
+.agency-main{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+
+.right-part-agent{
+    margin-top: 20px;
+    height: 600px;
+    width: 50%;
+    overflow-y: scroll;
+}
+
+.agencycard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(174, 195, 195);
+    margin: 5px;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.agency-label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.specialized-label {
+    font-weight: bold;
+}
+
+.resource {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(174, 195, 195, 0.5);
+    border-radius: 5px;
+}
+
+.resource-label {
+    font-size: 14px;
+    margin-bottom: 3px;
 }
 
 .detail{
@@ -88,9 +135,9 @@
 
 @media screen and (max-width: 1000px){
     .right{
-        width: 100%;
+        width: 50%;
     }
     .mapcontainer{
-        width: 100vw;
+        width: 50%;
     }
 }
